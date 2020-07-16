@@ -7,6 +7,7 @@
 .appName{
     padding-left: 20px;
     float: left;
+    font-family: 'Slab';
 }
 
 .navLinks{
@@ -22,10 +23,10 @@ li{
     margin-right: 15px;
 }
 
-
 a{
     text-decoration: none;
-    color: red;
+    color:#cc0000;
+    font-family: 'sans-serif';
   
 }
 a:hover {

@@ -1,0 +1,80 @@
+.homepage{
+    background-image: url("../images/barbellshadow.jpg");
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeHeader{
+    color: white;
+    font-family: 'Slab';
+    font-size: 40px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    color: white;
+    font-family: 'sans-serif';
+    font-size: 25px;
+}
+
+
+h2{
+    color: #cc0000;
+}
+
+.homeButton{
+    box-shadow:inset 0px -1px 0px 0px #cf866c;
+	background-color: #cc0000;
+	border-radius:3px;
+    border:1px solid #942911;
+    color: white;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:14px;
+	padding:13px 36px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #854629;
+
+}
+
+.homepgDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.details{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.details p{
+    font-size: 18px;
+}
+
+
+
+@media (min-width: 600px) {
+    .homepgDetails{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .details{
+        width: 25%;
+        padding: 20px;
+        text-align: left;
+    }
+    .details p{
+        font-size: 20px;
+    }
+    
+  }
+        
