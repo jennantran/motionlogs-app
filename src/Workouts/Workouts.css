@@ -1,0 +1,17 @@
+.workoutsHeader{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.workoutSearch{
+    color: white;
+}
+
+@media (min-width: 600px) {
+    .workoutsHeader{
+        font-size: 35px;
+    }
+
+}
+        
