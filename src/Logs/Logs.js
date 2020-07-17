@@ -5,9 +5,11 @@ import Timer from '../Timer/Timer';
 class Logs extends Component{
     render(){
         return(
-            <div>
-                <Timer></Timer>
-            </div>
+            <section>
+                <div className='addLogEntry'>
+                    <button>Add New Log</button>
+                </div>
+            </section>
         );
     }
 }

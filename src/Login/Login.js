@@ -11,6 +11,7 @@ class Login extends Component {
                         Email:
                         <input
                             type='text'
+                            className='loginInput'
                             
                             >
                         </input>
@@ -19,6 +20,7 @@ class Login extends Component {
                         Password:
                         <input
                             type='text'
+                            className='loginInput'
                             
                             >
                         </input>
