@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Workouts.css';
 import Workout from '../Workout/Workout';
+import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 
 class Workouts extends Component{
     constructor(props){
         super(props);
         this.state = {
-            results: '',
+            results: [],
         }
     }
     handleSubmit = (e) => {
@@ -36,9 +37,10 @@ class Workouts extends Component{
             .then(data=> {
                 console.log(data);
                 this.setState({
-                    results: data
+                    results: data.exercises
                 });
-                console.log(data);
+                console.log('set state', data);
+                console.log('data exercise', data.exercises);
             })
             .catch(function(err){
                 console.log('There was a fetch error');
@@ -47,11 +49,12 @@ class Workouts extends Component{
     render(){
             let results = this.state.results;
             console.log(results);
-            const calories = results.map((caloriesItem) => {
+            const calories = results.map((caloriesItem) =>{
                 return <section>
-                            <p>{caloriesItem.exercise[0]}</p>
-                         </section>
+                            <p>{caloriesItem.nf_calories}</p>
+                      </section>
             })
+            
         return(
             <div>
                 <h2 className='workoutsHeader'>Calories Burned</h2>
@@ -68,7 +71,7 @@ class Workouts extends Component{
                 </form>
                 <section id='results'>
                     <h2 id='resultsTitle'>Results</h2>
-                    
+                        {calories}
                 </section>
             </div>
         );
