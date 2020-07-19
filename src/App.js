@@ -7,20 +7,74 @@ import Login from './Login/Login';
 import Workouts from './Workouts/Workouts';
 import AddLogs from './AddLogs/AddLogs';
 import Logs from './Logs/Logs';
+import MotionsContext from './MotionsContext';
+import SignUp from './SignUp/SignUp';
+import config from './config';
+
+
+const logs = [
+  {
+    set: '1',
+    rep: '5',
+    weight: '10'
+  },
+]
 
 class App extends Component {
+  state = {
+    logs,
+    error: null,
+  };
+
+  addLog = log => {
+    this.setState({
+        logs: [...this.state.logs, log]
+    })
+  }
+  setLog = logs => {
+    this.setState({
+      logs,
+      error: null,
+    })
+  }
+  // componentDidMount(){
+  //   fetch(`https://cors-anywhere.herokuapp.com/${config.API_ENDPOINT}`, {
+  //     method: 'GET',
+  //     headers:{
+  //       'content-type': 'application/json'
+  //     }
+  //   })
+  //   .then(res => {
+  //     if(!res.ok){
+  //       console.log(res);
+  //       throw new Error(res.status);
+  //     }
+  //     return res.json();
+  //   })
+  //   .then(this.setLogs)
+  //   .catch(error => this.setState({ error }))
+  // }
+
   render(){
+    const contextValue = {
+      logs: this.state.logs,
+      addLogs: this.addLogs,
+      
+    }
     return (
       <div className='app'>
-        <nav><Nav></Nav></nav>
-        <main className='App'>
-            <Route exact path='/' component={HomePage} />
-            <Route path='/login' component={Login} />
-            <Route path='/workouts' component={Workouts} />
-            <Route path='/addlogs' component={AddLogs}></Route>
-            <Route path='/logs' component={Logs} />  
-        </main>
-        <footer></footer>
+        <MotionsContext.Provider value = {contextValue}>
+          <nav><Nav></Nav></nav>
+          <main className='App'>
+              <Route exact path='/' component={HomePage} />
+              <Route path='/login' component={Login} />
+              <Route path='/workouts' component={Workouts} />
+              <Route path='/addlogs' component={AddLogs}></Route>
+              <Route path='/logs' component={Logs} />  
+              <Route path='/signup' component={SignUp} />  
+          </main>
+          <footer></footer>
+        </MotionsContext.Provider>
      </div>
     );
   }

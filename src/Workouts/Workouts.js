@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Workouts.css';
+import Workout from '../Workout/Workout';
 
 
 class Workouts extends Component{
@@ -14,12 +15,14 @@ class Workouts extends Component{
         let sel = document.getElementById('muscle');
         let musVal = sel.value;
         const url = `https://wger.de/api/v2/exercise/?muscle=${musVal}`;
+        console.log(url);
 
         return fetch(url)
             .then(res => res.json())
             .then(json => {
+                console.log(json);
                 this.setState({
-                    results: json.results
+                    results: json
                 });
             })
             .catch(function(err){
@@ -27,6 +30,19 @@ class Workouts extends Component{
             })
       }
     render(){
+        const workoutList = this.state.results;
+        console.log(workoutList);
+        const workouts = workoutList.map((workoutItem) =>{
+            return <ul id='workout'>
+                        <li>
+                           <Workout
+                                id={workoutItem.id} 
+                                name={workoutItem.name} 
+                                description={workoutItem.description}                               
+                           />
+                        </li>
+                     </ul>
+        })
         return(
             <div>
                 <h2 className='workoutsHeader'>Workouts</h2>
@@ -58,6 +74,10 @@ class Workouts extends Component{
                             type='submit' 
                             value='submit' />
                 </form>
+                <section id='results'>
+                    <h2 id='resultsTitle'>Results</h2>
+                        <ul>{workouts}</ul>
+                </section>
             </div>
         );
     }
