@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'; 
 import './HomePage.css';
 
 class HomePage extends Component{
+    handleClick(e) {
+        this.props.history.push('/signup');
+    }
     render(){
         return(
             <div>
                 <section className='homepage'>
                     <h1 className='homeHeader'>Make your fitness journey EASIER!</h1>
                     <p>Track your progress.</p>
-                    <button className='homeButton'>Join now</button>
+                    <button 
+                        className='homeButton' 
+                        onClick={e => this.handleClick(e)}>Join now</button>
                 </section>
                 <section className='homepgDetails'>
                     <div className='details design'>
@@ -29,4 +35,4 @@ class HomePage extends Component{
     }
 }
 
-export default HomePage;
+export default withRouter(HomePage);
