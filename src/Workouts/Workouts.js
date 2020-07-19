@@ -15,18 +15,22 @@ class Workouts extends Component{
         console.log('was submitted');
         let query = document.getElementById('queryInput').value;
         console.log(query);
-        query = query.trim().replace(/\s/g, '%20')
+        // query = query.trim().replace(/\s/g, '%20')
         console.log(query);
-        const url = `https://trackapi.nutritionix.com/v2/natural/exercise?${query}`;
+        const url = `https://trackapi.nutritionix.com/v2/natural/exercise`;
         
         console.log(url);
      
         return fetch(url, {
             method: 'POST',
+            body: {
+                'query': JSON.stringify(query)
+            },
             headers:{
                 'Content-Type':'application/json',
                 'x-app-id':'d9893fb0',
-                'x-app-key':'81e3af2d37c0786edf8fb767699bce1b'
+                'x-app-key':'81e3af2d37c0786edf8fb767699bce1b',
+                
             },
         })
 
@@ -43,7 +47,7 @@ class Workouts extends Component{
             })
       }
     render(){
-            results = this.state.results;
+            let results = this.state.results;
         return(
             <div>
                 <h2 className='workoutsHeader'>Calories Burned</h2>
