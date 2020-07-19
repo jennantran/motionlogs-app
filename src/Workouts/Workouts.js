@@ -7,7 +7,7 @@ class Workouts extends Component{
     constructor(props){
         super(props);
         this.state = {
-            results: []
+            results: '',
         }
     }
     handleSubmit = (e) => {
@@ -15,6 +15,7 @@ class Workouts extends Component{
         console.log('was submitted');
         let query = document.getElementById('queryInput').value;
         console.log(query);
+        query = {'query': query};
         // query = query.trim().replace(/\s/g, '%20')
         console.log(query);
         const url = `https://trackapi.nutritionix.com/v2/natural/exercise`;
@@ -23,14 +24,11 @@ class Workouts extends Component{
      
         return fetch(url, {
             method: 'POST',
-            body: {
-                'query': JSON.stringify(query)
-            },
+            body: JSON.stringify(query),
             headers:{
                 'Content-Type':'application/json',
                 'x-app-id':'d9893fb0',
-                'x-app-key':'81e3af2d37c0786edf8fb767699bce1b',
-                
+                'x-app-key':'81e3af2d37c0786edf8fb767699bce1b',       
             },
         })
 
@@ -48,6 +46,12 @@ class Workouts extends Component{
       }
     render(){
             let results = this.state.results;
+            console.log(results);
+            const calories = results.map((caloriesItem) => {
+                return <section>
+                            <p>{caloriesItem.exercise[0]}</p>
+                         </section>
+            })
         return(
             <div>
                 <h2 className='workoutsHeader'>Calories Burned</h2>
@@ -64,7 +68,7 @@ class Workouts extends Component{
                 </form>
                 <section id='results'>
                     <h2 id='resultsTitle'>Results</h2>
-                            {results}
+                    
                 </section>
             </div>
         );
