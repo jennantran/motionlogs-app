@@ -43,7 +43,7 @@ class Workouts extends Component{
             })
       }
     render(){
-        
+            results = this.state.results;
         return(
             <div>
                 <h2 className='workoutsHeader'>Calories Burned</h2>
@@ -60,7 +60,7 @@ class Workouts extends Component{
                 </form>
                 <section id='results'>
                     <h2 id='resultsTitle'>Results</h2>
-            
+                            {results}
                 </section>
             </div>
         );
