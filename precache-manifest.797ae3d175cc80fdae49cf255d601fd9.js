@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53afbf643d7b190612586ba66eccfab6",
+    "revision": "00abadfd36c9f82e14f7713185c49cdf",
     "url": "/motionlogs-app/index.html"
   },
   {
-    "revision": "7a58e073b7bf77802153",
-    "url": "/motionlogs-app/static/css/main.ce74c24e.chunk.css"
+    "revision": "db83a676f2b6eec0b708",
+    "url": "/motionlogs-app/static/css/main.a9033d70.chunk.css"
   },
   {
     "revision": "a0c2a5822257205e9012",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/motionlogs-app/static/js/2.6d46bd64.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7a58e073b7bf77802153",
-    "url": "/motionlogs-app/static/js/main.6cddd0f7.chunk.js"
+    "revision": "db83a676f2b6eec0b708",
+    "url": "/motionlogs-app/static/js/main.41eac7f7.chunk.js"
   },
   {
     "revision": "116f97d7b3ce6d3384f7",

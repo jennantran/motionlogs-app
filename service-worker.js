@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/motionlogs-app/precache-manifest.d69bb958767b9d2e763e1705f17ddf52.js"
+  "/motionlogs-app/precache-manifest.797ae3d175cc80fdae49cf255d601fd9.js"
 );
 
 self.addEventListener('message', (event) => {

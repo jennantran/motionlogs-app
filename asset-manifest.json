@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/motionlogs-app/static/css/main.ce74c24e.chunk.css",
-    "main.js": "/motionlogs-app/static/js/main.6cddd0f7.chunk.js",
-    "main.js.map": "/motionlogs-app/static/js/main.6cddd0f7.chunk.js.map",
+    "main.css": "/motionlogs-app/static/css/main.a9033d70.chunk.css",
+    "main.js": "/motionlogs-app/static/js/main.41eac7f7.chunk.js",
+    "main.js.map": "/motionlogs-app/static/js/main.41eac7f7.chunk.js.map",
     "runtime-main.js": "/motionlogs-app/static/js/runtime-main.58c8ad0d.js",
     "runtime-main.js.map": "/motionlogs-app/static/js/runtime-main.58c8ad0d.js.map",
     "static/js/2.6d46bd64.chunk.js": "/motionlogs-app/static/js/2.6d46bd64.chunk.js",
     "static/js/2.6d46bd64.chunk.js.map": "/motionlogs-app/static/js/2.6d46bd64.chunk.js.map",
     "index.html": "/motionlogs-app/index.html",
-    "precache-manifest.d69bb958767b9d2e763e1705f17ddf52.js": "/motionlogs-app/precache-manifest.d69bb958767b9d2e763e1705f17ddf52.js",
+    "precache-manifest.797ae3d175cc80fdae49cf255d601fd9.js": "/motionlogs-app/precache-manifest.797ae3d175cc80fdae49cf255d601fd9.js",
     "service-worker.js": "/motionlogs-app/service-worker.js",
-    "static/css/main.ce74c24e.chunk.css.map": "/motionlogs-app/static/css/main.ce74c24e.chunk.css.map",
+    "static/css/main.a9033d70.chunk.css.map": "/motionlogs-app/static/css/main.a9033d70.chunk.css.map",
     "static/js/2.6d46bd64.chunk.js.LICENSE.txt": "/motionlogs-app/static/js/2.6d46bd64.chunk.js.LICENSE.txt",
     "static/media/HomePage.css": "/motionlogs-app/static/media/barbellshadow.406d66a6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.58c8ad0d.js",
     "static/js/2.6d46bd64.chunk.js",
-    "static/css/main.ce74c24e.chunk.css",
-    "static/js/main.6cddd0f7.chunk.js"
+    "static/css/main.a9033d70.chunk.css",
+    "static/js/main.41eac7f7.chunk.js"
   ]
 }
