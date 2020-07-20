@@ -5,7 +5,7 @@ import LogItem from '../LogItem/LogItem';
 class LogList extends Component{
     static contextType = MotionsContext;
     state = {
-        logs: this.context.logs
+        logs: this.context.logs,
     }
     render(){
         const { logs } = this.context;
@@ -13,9 +13,10 @@ class LogList extends Component{
         return(
             <section>
                 <ul className='logList'>
-                    {logs.map(log => 
+                    {logs.map((log, i) => 
                         <LogItem 
-                            key={log.id}
+                            key={i}
+                            id={i}
                             {...log}
                         />)}
                 </ul>

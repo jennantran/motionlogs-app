@@ -14,6 +14,7 @@ import config from './config';
 
 const logs = [
   {
+    id: '0',
     set: '1',
     rep: '5',
     weight: '10'
@@ -31,35 +32,26 @@ class App extends Component {
         logs: [...this.state.logs, log]
     })
   }
+
+
   setLog = logs => {
     this.setState({
       logs,
       error: null,
     })
   }
-  // componentDidMount(){
-  //   fetch(`https://cors-anywhere.herokuapp.com/${config.API_ENDPOINT}`, {
-  //     method: 'GET',
-  //     headers:{
-  //       'content-type': 'application/json'
-  //     }
-  //   })
-  //   .then(res => {
-  //     if(!res.ok){
-  //       console.log(res);
-  //       throw new Error(res.status);
-  //     }
-  //     return res.json();
-  //   })
-  //   .then(this.setLogs)
-  //   .catch(error => this.setState({ error }))
-  // }
 
+  deleteLog = logId => {
+    console.log('delete log enter');
+    this.setState({
+     logs: this.state.logs.filter(log => log.id !== logId)
+    });
+  }
   render(){
     const contextValue = {
       logs: this.state.logs,
       addLogs: this.addLogs,
-      
+      deletelog: this.deleteLog
     }
     return (
       <div className='app'>

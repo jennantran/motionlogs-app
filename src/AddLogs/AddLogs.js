@@ -25,6 +25,7 @@ class AddLogs extends Component{
             set: set.value,
             rep: rep.value,
             weight: weight.value,
+            id: tempLogs.length-1,
         }
 
         tempLogs.push(log);
