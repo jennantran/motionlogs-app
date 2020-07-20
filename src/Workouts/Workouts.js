@@ -60,18 +60,21 @@ class Workouts extends Component{
                 <h2 className='workoutsHeader'>Calories Burned</h2>
                 <form className='searchBox'
                       onSubmit = { e => this.handleSubmit(e)}> 
-                    <label className='workoutSearch'>
+                    <label className='workoutSearch'
+                           >
                             Enter your workout: 
-                          <input id='queryInput'></input>
+                         
                         </label>
+                        <input id='queryInput'
+                            value='ex: run 10 miles...'></input>
                         <input   
                             className='logSubmit'
                             type='submit' 
-                            value='calculate exercise' />
+                            value='calculate' />
                 </form>
                 <section id='results'>
                     <h2 id='resultsTitle'>Results</h2>
-                        {calories}
+                        {calories} <p>calories</p>
                 </section>
             </div>
         );

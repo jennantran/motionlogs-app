@@ -6,12 +6,16 @@
 
 .workoutSearch{
     color: white;
+    padding-bottom: 20px;
+}
+#queryInput{
+    width: 200px;
+    height: 100px;
 }
 
 @media (min-width: 600px) {
     .workoutsHeader{
         font-size: 35px;
     }
-
 }
         
