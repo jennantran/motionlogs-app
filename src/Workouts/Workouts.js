@@ -66,7 +66,7 @@ class Workouts extends Component{
                          
                         </label>
                         <input id='queryInput'
-                            value='ex: run 10 miles...'></input>
+                            placeholder='ex: run 10 miles...'></input>
                         <input   
                             className='logSubmit'
                             type='submit' 
