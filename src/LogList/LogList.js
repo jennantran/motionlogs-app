@@ -11,7 +11,7 @@ class LogList extends Component{
         const { logs } = this.context;
         console.log(logs);
         return(
-            <section className='logContainer'>
+            <section>
                 <ul className='logList'>
                     {logs.map(log => 
                         <LogItem 
