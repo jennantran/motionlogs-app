@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "00abadfd36c9f82e14f7713185c49cdf",
+    "revision": "fcd0979157591876cd95ee56094d4cff",
     "url": "/motionlogs-app/index.html"
   },
   {
-    "revision": "db83a676f2b6eec0b708",
+    "revision": "16f3a4419d6a1772816c",
     "url": "/motionlogs-app/static/css/main.a9033d70.chunk.css"
   },
   {
-    "revision": "a0c2a5822257205e9012",
-    "url": "/motionlogs-app/static/js/2.6d46bd64.chunk.js"
+    "revision": "00d83d305de1bfb7bc45",
+    "url": "/motionlogs-app/static/js/2.71619b9d.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/motionlogs-app/static/js/2.6d46bd64.chunk.js.LICENSE.txt"
+    "revision": "f60b28b3837258692bd21417485386f5",
+    "url": "/motionlogs-app/static/js/2.71619b9d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "db83a676f2b6eec0b708",
-    "url": "/motionlogs-app/static/js/main.41eac7f7.chunk.js"
+    "revision": "16f3a4419d6a1772816c",
+    "url": "/motionlogs-app/static/js/main.c77ada85.chunk.js"
   },
   {
     "revision": "116f97d7b3ce6d3384f7",
