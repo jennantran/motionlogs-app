@@ -50,8 +50,8 @@ class App extends Component {
   render(){
     const contextValue = {
       logs: this.state.logs,
-      addLogs: this.addLogs,
-      deletelog: this.deleteLog
+      addLog: this.addLog,
+      deleteLog: this.deleteLog
     }
     return (
       <div className='app'>

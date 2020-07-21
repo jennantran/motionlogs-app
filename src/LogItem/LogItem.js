@@ -14,7 +14,7 @@ class LogItem extends Component{
         console.log('enter delete');
         console.log(this.state.logs);
         console.log(logId);
-
+        console.log(this.context);
         this.context.deleteLog(logId);
 
       }
