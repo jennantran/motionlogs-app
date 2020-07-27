@@ -15,7 +15,6 @@ class LogItem extends Component{
         console.log('enter delete');
         console.log(this.state.logs);
         console.log(logId);
-        console.log(this.context);
         this.context.deleteLog(logId);
       }
   
@@ -23,7 +22,6 @@ class LogItem extends Component{
     render(){
         const { modified } = this.props;
         return(
-                <li>
                     <div className='logContainer'>
                         <p>Workout Name: &nbsp; {this.props.name}&nbsp;</p>
                         <p>Set:&nbsp;  {this.props.set}&nbsp;</p>
@@ -35,8 +33,7 @@ class LogItem extends Component{
                         <button className='delete'
                                   onClick={this.handleDelete
                                   }>Delete</button>
-                    </div>
-                </li>
+                    </div>             
         );
     }
 }

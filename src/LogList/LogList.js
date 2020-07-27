@@ -13,12 +13,13 @@ class LogList extends Component{
         return(
             <section>
                 <ul className='logList'>
-                    {logs.map((log, i) => 
+                    {logs.map(log => 
+                    <li key = {log.id}>
                         <LogItem 
-                            key={i}
-                            id={i}
+                            id={log.id}
                             {...log}
-                        />)}
+                        />
+                        </li>)}
                 </ul>
             </section>
         );

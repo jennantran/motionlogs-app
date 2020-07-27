@@ -21,7 +21,9 @@ const logs = [
 
 class App extends Component {
   state = {
-    logs,
+    logs: [],
+    user_id: '1', 
+    addLog: this.addLog,
     error: null,
   };
 
@@ -49,7 +51,8 @@ class App extends Component {
     const contextValue = {
       logs: this.state.logs,
       addLog: this.addLog,
-      deleteLog: this.deleteLog
+      deleteLog: this.deleteLog,
+      user_id: this.state.user_id,
 
     }
     return (
