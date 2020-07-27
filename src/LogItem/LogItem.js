@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './LogItem.css';
 import MotionsContext from '../MotionsContext';
 import { createBrotliCompress } from 'zlib';
+import { format } from 'date-fns';
 
 class LogItem extends Component{
     static contextType = MotionsContext;
@@ -16,18 +17,21 @@ class LogItem extends Component{
         console.log(logId);
         console.log(this.context);
         this.context.deleteLog(logId);
-
       }
   
 
     render(){
+        const { modified } = this.props;
         return(
                 <li>
                     <div className='logContainer'>
                         <p>Workout Name: &nbsp; {this.props.name}&nbsp;</p>
                         <p>Set:&nbsp;  {this.props.set}&nbsp;</p>
                         <p>Reps:&nbsp; {this.props.rep}&nbsp;</p>
-                        <p>Weight: &nbsp; {this.props.weight}&nbsp;</p> 
+                        <p>Weight: &nbsp; {this.props.weight}&nbsp;</p>
+                        <span className='date'>
+                        {(modified) ? format(new Date(modified), 'dd-MM-yyyy') : ''}
+                        </span>
                         <button className='delete'
                                   onClick={this.handleDelete
                                   }>Delete</button>

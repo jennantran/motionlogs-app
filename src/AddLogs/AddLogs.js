@@ -26,6 +26,7 @@ class AddLogs extends Component{
             rep: rep.value,
             weight: weight.value,
             id: tempLogs.length-1,
+            modified: new Date(),
         }
 
         tempLogs.push(log);

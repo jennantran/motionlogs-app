@@ -9,8 +9,6 @@ import AddLogs from './AddLogs/AddLogs';
 import Logs from './Logs/Logs';
 import MotionsContext from './MotionsContext';
 import SignUp from './SignUp/SignUp';
-import config from './config';
-
 
 const logs = [
   {
@@ -31,8 +29,8 @@ class App extends Component {
     this.setState({
         logs: [...this.state.logs, log]
     })
+  setTimeout(() => console.log(this.state))
   }
-
 
   setLog = logs => {
     this.setState({
@@ -52,6 +50,7 @@ class App extends Component {
       logs: this.state.logs,
       addLog: this.addLog,
       deleteLog: this.deleteLog
+
     }
     return (
       <div className='app'>
