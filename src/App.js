@@ -10,14 +10,14 @@ import Logs from './Logs/Logs';
 import MotionsContext from './MotionsContext';
 import SignUp from './SignUp/SignUp';
 
-const logs = [
-  {
-    id: '0',
-    set: '1',
-    rep: '5',
-    weight: '10'
-  },
-]
+// const logs = [
+//   {
+//     id: '0',
+//     set: '1',
+//     rep: '5',
+//     weight: '10'
+//   },
+// ]
 
 class App extends Component {
   state = {
@@ -25,13 +25,14 @@ class App extends Component {
     user_id: '1', 
     addLog: this.addLog,
     error: null,
+    log_id:'1',
   };
 
   addLog = log => {
     this.setState({
         logs: [...this.state.logs, log]
     })
-  setTimeout(() => console.log(this.state))
+  setTimeout(() => console.log(this.state.logs))
   }
 
   setLog = logs => {
@@ -53,6 +54,7 @@ class App extends Component {
       addLog: this.addLog,
       deleteLog: this.deleteLog,
       user_id: this.state.user_id,
+      log_id: this.state.log_id
 
     }
     return (

@@ -17,7 +17,11 @@ class LogList extends Component{
                     <li key = {log.id}>
                         <LogItem 
                             id={log.id}
-                            {...log}
+                            name={log.wout_name}
+                            set={log.set}
+                            rep={log.rep}
+                            weight={log.weight}
+                            date={log.date_added}
                         />
                         </li>)}
                 </ul>

@@ -78,33 +78,35 @@ class AddLogs extends Component{
         e.preventDefault();
    
         const newLog = {
-            wout_name: this.state.wout_name,
-            set: this.state.set,
-            rep: this.state.rep,
+            log_id: this.context.log_id,
+            wout_name: this.state.wout_name.value,
+            set: this.state.set.value,
+            rep: this.state.rep.value,
             weight: this.state.weight,
             user_id: this.context.user_id,
             date_added: new Date()
         };
         console.log(newLog);
-        const baseUrl = 'http://localhost:3000';
+        const baseUrl = 'http://localhost:8000';
         const logEndPoint = '/api/logs';
 
         fetch(baseUrl + logEndPoint, {
-            method: 'POST',
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(newLog)
         })
         .then((res)=> {
+            console.log(res);
             if(!res.ok){
                 return res.json().then(e => Promise.reject(e));
             }
-            return res;
+            return res.json;
         })
         .then((data)=> {
-            this.context.addLog(data);
             console.log(data);
+            this.context.addLog(data);
             this.props.history.push('/');
         })  
         .catch((error) => {

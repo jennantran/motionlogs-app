@@ -20,7 +20,7 @@ class LogItem extends Component{
   
 
     render(){
-        const { modified } = this.props;
+        const { date } = this.props;
         return(
                     <div className='logContainer'>
                         <p>Workout Name: &nbsp; {this.props.name}&nbsp;</p>
@@ -28,7 +28,7 @@ class LogItem extends Component{
                         <p>Reps:&nbsp; {this.props.rep}&nbsp;</p>
                         <p>Weight: &nbsp; {this.props.weight}&nbsp;</p>
                         <span className='date'>
-                        {(modified) ? format(new Date(modified), 'dd-MM-yyyy') : ''}
+                        {(date) ? format(new Date(date), 'dd-MM-yyyy') : ''}
                         </span>
                         <button className='delete'
                                   onClick={this.handleDelete
