@@ -82,7 +82,7 @@ class AddLogs extends Component{
             wout_name: this.state.wout_name.value,
             set: this.state.set.value,
             rep: this.state.rep.value,
-            weight: this.state.weight,
+            weight: this.state.weight.value,
             user_id: this.context.user_id,
             date_added: new Date()
         };
