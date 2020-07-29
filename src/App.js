@@ -28,6 +28,25 @@ class App extends Component {
     log_id:'1',
   };
 
+  componentDidMount(){
+    const baseUrl = 'http://localhost:8000';
+    fetch(`${baseUrl}/api/logs`,{
+      'Content-Type': 'application/json'
+    })
+    .then(res => {
+      if (!res) {
+        return res.json().then(e => Promise.reject(e));
+      }
+      return res.json();
+    })
+    .then((logs) => {
+      console.log(logs);
+      this.setState({ logs: logs });
+    })
+    .catch(error => {
+      console.error({ error })
+    });
+}
   addLog = log => {
     this.setState({
         logs: [...this.state.logs, log]
@@ -43,10 +62,10 @@ class App extends Component {
     })
   }
 
-  deleteLog = logId => {
+  deleteLog = log_id => {
     console.log('delete log enter');
     this.setState({
-     logs: this.state.logs.filter(log => log.id !== logId)
+     logs: this.state.logs.filter(log => log.id !== log_id)
     });
   }
   render(){

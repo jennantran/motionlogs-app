@@ -10,13 +10,39 @@ class LogItem extends Component{
     state = {
         logs: this.context.logs
     }
-    handleDelete = (e) =>  {
-        const logId = this.props.id;
-        console.log('enter delete');
-        console.log(this.state.logs);
-        console.log(logId);
-        this.context.deleteLog(logId);
-      }
+    // handleDelete = (e) =>  {
+    //     const logId = this.props.id;
+    //     console.log('enter delete');
+    //     console.log(this.state.logs);
+    //     console.log(logId);
+    //     this.context.deleteLog(logId);
+    //   }
+
+    handleDelete = e => {
+        e.preventDefault();
+        const log_id = this.props.id;
+        const baseUrl = 'http://localhost:8000';
+
+        fetch(`${baseUrl}/api/logs/${log_id}`,{
+            method:'DELETE',
+            headers:{
+                    'content-type': 'application/json'
+            },
+        })
+        .then(res => {
+            if(!res.ok){
+                return res.json().then(e => Promise.reject(e))
+            }
+            console.log(res);
+            return res;
+        })
+        .then((log_id) => {
+            this.context.deleteLog(log_id);
+        })
+        .catch(error => {
+            console.error({ error });
+        })
+    }
   
 
     render(){
@@ -31,8 +57,7 @@ class LogItem extends Component{
                         {(date) ? format(new Date(date), 'dd-MM-yyyy') : ''}
                         </span>
                         <button className='delete'
-                                  onClick={this.handleDelete
-                                  }>Delete</button>
+                                  onClick={this.handleDelete}>Delete</button>
                     </div>             
         );
     }

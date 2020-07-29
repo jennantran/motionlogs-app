@@ -7,6 +7,7 @@ class LogList extends Component{
     state = {
         logs: this.context.logs,
     }
+    
     render(){
         const { logs } = this.context;
         console.log(logs);
@@ -17,11 +18,12 @@ class LogList extends Component{
                     <li key = {log.id}>
                         <LogItem 
                             id={log.id}
-                            name={log.wout_name}
+                            name={log.name}
                             set={log.set}
                             rep={log.rep}
                             weight={log.weight}
                             date={log.date_added}
+                            onClick={ (e) => this.handeDelete(e) }
                         />
                         </li>)}
                 </ul>
