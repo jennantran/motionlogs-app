@@ -6,7 +6,7 @@ import { format } from 'date-fns';
 
 class LogItem extends Component{
     static contextType = MotionsContext;
-    
+  
     state = {
         logs: this.context.logs
     }

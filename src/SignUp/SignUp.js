@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import './SignUp.css';
+import MotionsContext from '../MotionsContext';
 
 class SignUp extends Component {
+    static contextType = MotionsContext;
+        constructor(props){
+        
+        }
     render(){
         return(
             <section>

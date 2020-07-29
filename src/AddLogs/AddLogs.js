@@ -102,11 +102,12 @@ class AddLogs extends Component{
             if(!res.ok){
                 return res.json().then(e => Promise.reject(e));
             }
-            return res.json;
+            return res.json();
         })
         .then((data)=> {
-            console.log(data);
+
             this.context.addLog(data);
+            console.log(data);
             this.props.history.push('/');
         })  
         .catch((error) => {
