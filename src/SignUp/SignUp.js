@@ -20,7 +20,7 @@ class SignUp extends Component {
         }
     handleRegistrationRedirect = () => {
         const { history } = this.props;
-        // history.push('/login');
+        history.push('/login');
     }
 
     updateUsername(username){
@@ -64,7 +64,7 @@ class SignUp extends Component {
         const { username, password } = this.state;
         const newUser = { username, password };
         this.context.addUser(newUser);
-        // this.handleRegistrationRedirect();
+        this.handleRegistrationRedirect();
         }
 
     handleVerify = (e) => {

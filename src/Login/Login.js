@@ -22,7 +22,7 @@ class Login extends Component {
 
     updateUsername(username) {
         this.setState({username: {value: username, touched: true}});
-     }
+    }
         
     updatePassword(password) {
         this.setState({password: {value: password, touched: true}});
