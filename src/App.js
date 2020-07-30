@@ -25,7 +25,8 @@ class App extends Component {
     user_id: '1', 
     addLog: this.addLog,
     error: null,
-    log_id:'1',
+    log_id:'',
+    addUser: this.addUser
   };
 
   componentDidMount(){
@@ -48,6 +49,7 @@ class App extends Component {
     });
 }
   addLog = log => {
+    console.log(log);
     this.setState({
         logs: [...this.state.logs, log]
     })
@@ -68,14 +70,30 @@ class App extends Component {
      logs: this.state.logs.filter(log => log.id !== log_id)
     });
   }
+
+  addUser = (username) => {
+    const baseUrl = 'http://localhost:8000';
+    return fetch(`${baseUrl}/signup`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(username),
+    })
+    .then( res => 
+      (!res.ok)
+        ? res.json().then(e => Promise.reject(e))
+        : res.json(),
+      )
+  }
   render(){
     const contextValue = {
       logs: this.state.logs,
       addLog: this.addLog,
       deleteLog: this.deleteLog,
       user_id: this.state.user_id,
-      log_id: this.state.log_id
-
+      log_id: this.state.log_id,
+      addUser: this.addUser,
     }
     return (
       <div className='app'>

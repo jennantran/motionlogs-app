@@ -78,7 +78,6 @@ class AddLogs extends Component{
         e.preventDefault();
    
         const newLog = {
-            log_id: this.context.log_id,
             wout_name: this.state.wout_name.value,
             set: this.state.set.value,
             rep: this.state.rep.value,

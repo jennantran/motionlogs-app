@@ -21,6 +21,7 @@ class LogItem extends Component{
     handleDelete = e => {
         e.preventDefault();
         const log_id = this.props.id;
+        console.log(log_id);
         const baseUrl = 'http://localhost:8000';
 
         fetch(`${baseUrl}/api/logs/${log_id}`,{
@@ -48,7 +49,8 @@ class LogItem extends Component{
     render(){
         const { date } = this.props;
         return(
-                    <div className='logContainer'>
+                    <div className='logContainer'
+                            id={this.props.id}>
                         <p>Workout Name: &nbsp; {this.props.name}&nbsp;</p>
                         <p>Set:&nbsp;  {this.props.set}&nbsp;</p>
                         <p>Reps:&nbsp; {this.props.rep}&nbsp;</p>

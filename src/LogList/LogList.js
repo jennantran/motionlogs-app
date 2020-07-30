@@ -7,7 +7,6 @@ class LogList extends Component{
     state = {
         logs: this.context.logs,
     }
-    
     render(){
         const { logs } = this.context;
         console.log(logs);
@@ -15,7 +14,7 @@ class LogList extends Component{
             <section>
                 <ul className='logList'>
                     {logs.map(log => 
-                    <li key = {log.id}>
+                    <li>
                         <LogItem 
                             id={log.id}
                             name={log.name}
