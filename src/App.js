@@ -8,16 +8,9 @@ import Workouts from './Workouts/Workouts';
 import AddLogs from './AddLogs/AddLogs';
 import Logs from './Logs/Logs';
 import MotionsContext from './MotionsContext';
+import AuthApiService from './services/auth-api-service';
+import TokenService from './services/token-service';
 import SignUp from './SignUp/SignUp';
-
-// const logs = [
-//   {
-//     id: '0',
-//     set: '1',
-//     rep: '5',
-//     weight: '10'
-//   },
-// ]
 
 class App extends Component {
   state = {
@@ -28,7 +21,39 @@ class App extends Component {
     log_id:'',
     addUser: this.addUser
   };
-
+  // handlePostAuthenticate = ({ username, password, user_id }) => {
+  //   AuthApiService.postLogin({
+  //     username: username.value,
+  //     password: password.value,
+  //   })
+  //     .then(res => {
+  //       TokenService.saveAuthToken(res.authToken)
+  //       this.setState({
+  //         user_id: res.user_id
+  //       });
+  //       fetch(`http://localhost:8000/api/logs`, {
+  //             method: 'GET',
+  //             headers: {
+  //               'Content-Type': 'application/json',
+  //               'Authorization': `bearer ${TokenService.getAuthToken()}`,
+  //               'user_id': res.user_id,
+  //             },
+  //           })
+  //           .then(res => {
+  //                 if (!res) {
+  //                    return res.json().then(e => Promise.reject(e));
+  //                  }
+  //                  return res.json();
+  //                })
+  //           .then((logs) => {
+  //                 console.log(logs);
+  //                   this.setState({ logs: logs });
+  //               })
+  //           .catch((error) => {
+  //             console.error(error);
+  //           });
+  //        })
+  //     };
   componentDidMount(){
     const baseUrl = 'http://localhost:8000';
     fetch(`${baseUrl}/api/logs`,{
