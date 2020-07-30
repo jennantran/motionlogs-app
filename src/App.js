@@ -21,58 +21,60 @@ class App extends Component {
     log_id:'',
     addUser: this.addUser
   };
-  // handlePostAuthenticate = ({ username, password, user_id }) => {
-  //   AuthApiService.postLogin({
-  //     username: username.value,
-  //     password: password.value,
-  //   })
-  //     .then(res => {
-  //       TokenService.saveAuthToken(res.authToken)
-  //       this.setState({
-  //         user_id: res.user_id
-  //       });
-  //       fetch(`http://localhost:8000/api/logs`, {
-  //             method: 'GET',
-  //             headers: {
-  //               'Content-Type': 'application/json',
-  //               'Authorization': `bearer ${TokenService.getAuthToken()}`,
-  //               'user_id': res.user_id,
-  //             },
-  //           })
-  //           .then(res => {
-  //                 if (!res) {
-  //                    return res.json().then(e => Promise.reject(e));
-  //                  }
-  //                  return res.json();
-  //                })
-  //           .then((logs) => {
-  //                 console.log(logs);
-  //                   this.setState({ logs: logs });
-  //               })
-  //           .catch((error) => {
-  //             console.error(error);
-  //           });
-  //        })
-  //     };
-  componentDidMount(){
-    const baseUrl = 'http://localhost:8000';
-    fetch(`${baseUrl}/api/logs`,{
-      'Content-Type': 'application/json'
+  handlePostAuthenticate = ({ username, password, user_id }) => {
+    console.log(username);
+    console.log(password);
+    AuthApiService.postLogin({
+      username: username.value,
+      password: password.value,
     })
-    .then(res => {
-      if (!res) {
-        return res.json().then(e => Promise.reject(e));
-      }
-      return res.json();
-    })
-    .then((logs) => {
-      console.log(logs);
-      this.setState({ logs: logs });
-    })
-    .catch(error => {
-      console.error({ error })
-    });
-}
+      .then(res => {
+        TokenService.saveAuthToken(res.authToken)
+        this.setState({
+          user_id: res.user_id
+        });
+        fetch(`http://localhost:8000/api/logs`, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`,
+                'user_id': res.user_id,
+              },
+            })
+            .then(res => {
+                  if (!res) {
+                     return res.json().then(e => Promise.reject(e));
+                   }
+                   return res.json();
+                 })
+            .then((logs) => {
+                  console.log(logs);
+                    this.setState({ logs: logs });
+                })
+            .catch((error) => {
+              console.error(error);
+            });
+         })
+      };
+//   componentDidMount(){
+//     const baseUrl = 'http://localhost:8000';
+//     fetch(`${baseUrl}/api/logs`,{
+//       'Content-Type': 'application/json'
+//     })
+//     .then(res => {
+//       if (!res) {
+//         return res.json().then(e => Promise.reject(e));
+//       }
+//       return res.json();
+//     })
+//     .then((logs) => {
+//       console.log(logs);
+//       this.setState({ logs: logs });
+//     })
+//     .catch(error => {
+//       console.error({ error })
+//     });
+// }
   addLog = log => {
     console.log(log);
     this.setState({
@@ -97,8 +99,9 @@ class App extends Component {
   }
 
   addUser = (username) => {
+    console.log('enter add user');
     const baseUrl = 'http://localhost:8000';
-    return fetch(`${baseUrl}/signup`, {
+    return fetch(`${baseUrl}/api/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -119,6 +122,7 @@ class App extends Component {
       user_id: this.state.user_id,
       log_id: this.state.log_id,
       addUser: this.addUser,
+      handlePostAuthenticate: this. handlePostAuthenticate
     }
     return (
       <div className='app'>
