@@ -15,7 +15,7 @@ import SignUp from './SignUp/SignUp';
 class App extends Component {
   state = {
     logs: [],
-    user_id: '1', 
+    user_id: '', 
     addLog: this.addLog,
     error: null,
     log_id:'',
@@ -41,20 +41,21 @@ class App extends Component {
                 'user_id': res.user_id,
               },
             })
-            .then(res => {
-                  if (!res) {
-                     return res.json().then(e => Promise.reject(e));
-                   }
-                   return res.json();
-                 })
-            .then((logs) => {
-                  console.log(logs);
-                    this.setState({ logs: logs });
-                })
+            .then((response) => response.json())
+            .then((responseJson) => {
+              if (responseJson.success && responseJson.success === false) {
+                throw new Error('error in getting logs');
+              } else {
+                this.setState({
+                  logs: responseJson,
+                });
+              }
+            })
             .catch((error) => {
               console.error(error);
             });
          })
+         
       };
 //   componentDidMount(){
 //     const baseUrl = 'http://localhost:8000';
@@ -80,6 +81,7 @@ class App extends Component {
     this.setState({
         logs: [...this.state.logs, log]
     })
+    setTimeout(() => console.log(this.state)); 
     console.log(this.state);
     console.log(this.state.logs);
   }
@@ -91,6 +93,7 @@ class App extends Component {
     })
   }
 
+ 
   deleteLog = log_id => {
     console.log('delete log enter');
     this.setState({
@@ -114,6 +117,12 @@ class App extends Component {
         : res.json(),
       )
   }
+
+  clearLogs = () => {
+    this.setState({
+      logs: [],
+    });
+  }
   render(){
     const contextValue = {
       logs: this.state.logs,
@@ -122,7 +131,8 @@ class App extends Component {
       user_id: this.state.user_id,
       log_id: this.state.log_id,
       addUser: this.addUser,
-      handlePostAuthenticate: this. handlePostAuthenticate
+      handlePostAuthenticate: this. handlePostAuthenticate,
+      clearLogs: this.clearLogs
     }
     return (
       <div className='app'>

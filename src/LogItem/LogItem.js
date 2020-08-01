@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './LogItem.css';
 import MotionsContext from '../MotionsContext';
-import { createBrotliCompress } from 'zlib';
+import TokenService from '../services/token-service';
 import { format } from 'date-fns';
 
 class LogItem extends Component{
@@ -27,7 +27,8 @@ class LogItem extends Component{
         fetch(`${baseUrl}/api/logs/${log_id}`,{
             method:'DELETE',
             headers:{
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+                    'Authorization': `bearer ${TokenService.getAuthToken()}`,
             },
         })
         .then(res => {
