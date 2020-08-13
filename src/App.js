@@ -95,10 +95,12 @@ class App extends Component {
 
  
   deleteLog = log_id => {
-    console.log('delete log enter');
+    console.log('delete log enter, log_id = '+ JSON.stringify(log_id)+ "type = "+ typeof(log_id));
+    console.log(this.state.logs);
     this.setState({
-     logs: this.state.logs.filter(log => log.id !== log_id)
+      logs: this.state.logs.filter(log => log.id !== log_id)
     });
+    console.log(this.state.logs);
   }
 
   addUser = (username) => {
@@ -124,6 +126,7 @@ class App extends Component {
     });
   }
   render(){
+    console.log(this.state.logs);
     const contextValue = {
       logs: this.state.logs,
       addLog: this.addLog,
