@@ -22,8 +22,6 @@ class App extends Component {
     addUser: this.addUser
   };
   handlePostAuthenticate = ({ username, password, user_id }) => {
-    console.log(username);
-    console.log(password);
     AuthApiService.postLogin({
       username: username.value,
       password: password.value,
@@ -97,8 +95,10 @@ class App extends Component {
   deleteLog = log_id => {
     console.log('delete log enter, log_id = '+ JSON.stringify(log_id)+ "type = "+ typeof(log_id));
     console.log(this.state.logs);
+    console.log(this.state.logs[0].id);
+    console.log(log_id);
     this.setState({
-      logs: this.state.logs.filter(log => log.id !== log_id)
+      logs: this.state.logs.filter(log => log.id != log_id)
     });
     console.log(this.state.logs);
   }
@@ -126,7 +126,6 @@ class App extends Component {
     });
   }
   render(){
-    console.log(this.state.logs);
     const contextValue = {
       logs: this.state.logs,
       addLog: this.addLog,

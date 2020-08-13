@@ -48,7 +48,6 @@ class Workouts extends Component{
       }
     render(){
             let results = this.state.results;
-            console.log(results);
             const calories = results.map((caloriesItem) =>{
                 return <section>
                             <p>{caloriesItem.nf_calories}</p>

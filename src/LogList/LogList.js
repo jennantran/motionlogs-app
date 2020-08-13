@@ -10,7 +10,6 @@ class LogList extends Component{
 
     render(){
         const { logs } = this.context;
-        console.log(logs);
         return(
             <section>
                 <ul className='logList'>

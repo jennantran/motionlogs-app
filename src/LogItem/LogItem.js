@@ -10,20 +10,11 @@ class LogItem extends Component{
     state = {
         logs: this.context.logs
     }
-    // handleDelete = (e) =>  {
-    //     const logId = this.props.id;
-    //     console.log('enter delete');
-    //     console.log(this.state.logs);
-    //     console.log(logId);
-    //     this.context.deleteLog(logId);
-    //   }
 
     handleDelete = e => {
         e.preventDefault();
         const log_id = this.props.id;
-        console.log(log_id);
         const baseUrl = 'http://localhost:8000';
-
         fetch(`${baseUrl}/api/logs/${log_id}`,{
             method:'DELETE',
             headers:{
@@ -35,10 +26,9 @@ class LogItem extends Component{
             if(!res.ok){
                 return res.json().then(e => Promise.reject(e))
             }
-            console.log(res);
             return res;
         })
-        .then((log_id) => {
+        .then(() => {
             this.context.deleteLog(log_id);
         })
         .catch(error => {
