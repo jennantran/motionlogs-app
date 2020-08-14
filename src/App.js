@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import './App.css';
-import HomePage from './HomePage/HomePage';
-import Login from './Login/Login';
-import Workouts from './Workouts/Workouts';
-import AddLogs from './AddLogs/AddLogs';
-import Logs from './Logs/Logs';
 import MotionsContext from './MotionsContext';
 import AuthApiService from './services/auth-api-service';
 import TokenService from './services/token-service';
 import SignUp from './SignUp/SignUp';
 import API_ENDPOINT from './config';
+import HomePage from './HomePage/HomePage';
+import Login from './Login/Login';
+import Workouts from './Workouts/Workouts';
+import AddLogs from './AddLogs/AddLogs';
+import Logs from './Logs/Logs'
+
 
 class App extends Component {
   state = {
@@ -53,18 +54,14 @@ class App extends Component {
             .catch((error) => {
               console.error(error);
             });
-         })
-         
+         })    
       };
 
   addLog = log => {
-    console.log(log);
     this.setState({
         logs: [...this.state.logs, log]
     })
     setTimeout(() => console.log(this.state)); 
-    console.log(this.state);
-    console.log(this.state.logs);
   }
 
   setLog = logs => {
@@ -76,19 +73,13 @@ class App extends Component {
 
  
   deleteLog = log_id => {
-    console.log('delete log enter, log_id = '+ JSON.stringify(log_id)+ "type = "+ typeof(log_id));
-    console.log(this.state.logs);
-    console.log(this.state.logs[0].id);
-    console.log(log_id);
     this.setState({
       logs: this.state.logs.filter(log => log.id != log_id)
     });
-    console.log(this.state.logs);
   }
 
   addUser = (username) => {
-    console.log('enter add user');
-    return fetch(`${API_ENDPOINT}/signup`, {
+    return fetch(`${API_ENDPOINT.API_ENDPOINT}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -121,7 +112,7 @@ class App extends Component {
     return (
       <div className='app'>
         <MotionsContext.Provider value = {contextValue}>
-          <nav><Nav></Nav></nav>
+          <nav><Nav/></nav>
           <main className='App'>
               <Route exact path='/' component={HomePage} />
               <Route path='/login' component={Login} />
@@ -130,7 +121,6 @@ class App extends Component {
               <Route path='/logs' component={Logs} />  
               <Route path='/signup' component={SignUp} />  
           </main>
-          <footer></footer>
         </MotionsContext.Provider>
      </div>
     );

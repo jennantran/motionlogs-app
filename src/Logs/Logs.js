@@ -17,7 +17,7 @@ class Logs extends Component{
     changePage = (page) => {
         this.setState({ page })
     }
-
+    
     render(){
         const { page } = this.state;
         const { logs } = this.context; 

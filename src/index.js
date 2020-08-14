@@ -6,10 +6,10 @@ import App from './App';
 import './index.css';
 
 ReactDOM.render(
-     <BrowserRouter>
-     <MotionsContext.Provider>
-       <App />
-       </MotionsContext.Provider>
-     </BrowserRouter>,
+      <BrowserRouter>
+          <MotionsContext.Provider>
+             <App />
+          </MotionsContext.Provider>
+      </BrowserRouter>,
       document.getElementById('root')
-    );
+);
