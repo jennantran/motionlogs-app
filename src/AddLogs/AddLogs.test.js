@@ -4,15 +4,18 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import App from  '../App';
 import AddLogs from './AddLogs';
+import Logs from '../Logs/Logs';
 
 it('renders addlogs component without crashing', () => {
   const div = document.createElement("div");
   ReactDOM.render(
-    <BrowserRouter>
-      <App>
-        <AddLogs></AddLogs>
-      </App>
-    </BrowserRouter>,
+      <BrowserRouter>
+        <App>
+            <Logs>
+                 <AddLogs></AddLogs>
+            </Logs>
+        </App>
+      </BrowserRouter>,
     div
   );
   //clean up code
@@ -24,7 +27,9 @@ it('renders the addlogs UI as expected', () => {
       .create(
         <BrowserRouter>
         <App>
-        <AddLogs></AddLogs>
+            <Logs>
+                 <AddLogs></AddLogs>
+            </Logs>
         </App>
       </BrowserRouter>,
       )

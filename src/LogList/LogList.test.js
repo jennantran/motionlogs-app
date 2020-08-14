@@ -4,13 +4,16 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import App from  '../App';
 import LogList from './LogList';
+import Logs from '../Logs/Logs';
 
 it('renders LogList component without crashing', () => {
   const div = document.createElement("div");
   ReactDOM.render(
     <BrowserRouter>
       <App>
-         <LogList></LogList>
+         <Logs>
+             <LogList></LogList>
+         </Logs>
       </App>
     </BrowserRouter>,
     div
@@ -24,7 +27,9 @@ it('renders the LogList UI as expected', () => {
       .create(
         <BrowserRouter>
         <App>
-            <LogList></LogList>
+           <Logs>
+               <LogList></LogList>
+           </Logs>
         </App>
       </BrowserRouter>,
       )
