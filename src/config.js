@@ -1,4 +1,4 @@
 export default{
-    API_ENDPOINT: 'https://localhost:8000/api',
+    API_ENDPOINT: 'https://sheltered-fortress-79630.herokuapp.com/api',
     TOKEN_KEY: 'log-client-auth-token',
 }

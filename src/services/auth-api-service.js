@@ -1,9 +1,8 @@
 import API_ENDPOINT from '../config';
 
 const AuthApiService = {
-  postLogin(credentials) {
-    const baseUrl = 'http://localhost:8000';
-    return fetch(`${baseUrl}/api/auth/login`, {
+  postLogin(credentials) {;
+    return fetch(`${API_ENDPOINT.API_ENDPOINT}/auth/login`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

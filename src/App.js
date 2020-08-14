@@ -11,6 +11,7 @@ import MotionsContext from './MotionsContext';
 import AuthApiService from './services/auth-api-service';
 import TokenService from './services/token-service';
 import SignUp from './SignUp/SignUp';
+import API_ENDPOINT from './config';
 
 class App extends Component {
   state = {
@@ -31,7 +32,7 @@ class App extends Component {
         this.setState({
           user_id: res.user_id
         });
-        fetch(`http://localhost:8000/api/logs`, {
+        fetch(`${API_ENDPOINT.API_ENDPOINT}/logs`, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
@@ -55,25 +56,7 @@ class App extends Component {
          })
          
       };
-//   componentDidMount(){
-//     const baseUrl = 'http://localhost:8000';
-//     fetch(`${baseUrl}/api/logs`,{
-//       'Content-Type': 'application/json'
-//     })
-//     .then(res => {
-//       if (!res) {
-//         return res.json().then(e => Promise.reject(e));
-//       }
-//       return res.json();
-//     })
-//     .then((logs) => {
-//       console.log(logs);
-//       this.setState({ logs: logs });
-//     })
-//     .catch(error => {
-//       console.error({ error })
-//     });
-// }
+
   addLog = log => {
     console.log(log);
     this.setState({
@@ -105,8 +88,7 @@ class App extends Component {
 
   addUser = (username) => {
     console.log('enter add user');
-    const baseUrl = 'http://localhost:8000';
-    return fetch(`${baseUrl}/api/signup`, {
+    return fetch(`${API_ENDPOINT}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

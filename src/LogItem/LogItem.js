@@ -3,6 +3,7 @@ import './LogItem.css';
 import MotionsContext from '../MotionsContext';
 import TokenService from '../services/token-service';
 import { format } from 'date-fns';
+import API_ENDPOINT from '../config';
 
 class LogItem extends Component{
     static contextType = MotionsContext;
@@ -14,8 +15,7 @@ class LogItem extends Component{
     handleDelete = e => {
         e.preventDefault();
         const log_id = this.props.id;
-        const baseUrl = 'http://localhost:8000';
-        fetch(`${baseUrl}/api/logs/${log_id}`,{
+        fetch(`${API_ENDPOINT.API_ENDPOINT}/logs/${log_id}`,{
             method:'DELETE',
             headers:{
                     'content-type': 'application/json',
