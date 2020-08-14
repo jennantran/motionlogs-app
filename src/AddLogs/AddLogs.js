@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AddLogs.css';
 import MotionsContext from '../MotionsContext';
-import config from '../config';
+import API_ENDPOINT from '../config';
 import Logs from '../Logs/Logs';
 
 
@@ -86,13 +86,13 @@ class AddLogs extends Component{
             date_added: new Date()
         };
         console.log(newLog);
-        const baseUrl = 'http://localhost:8000';
+        const baseUrl = `${API_ENDPOINT.API_ENDPOINT}`;
         const logEndPoint = '/api/logs';
 
         fetch(baseUrl + logEndPoint, {
-            method: "POST",
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(newLog)
         })
