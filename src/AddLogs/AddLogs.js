@@ -88,7 +88,7 @@ class AddLogs extends Component{
         console.log(newLog);
         const logEndPoint = '/api/logs';
 
-        fetch(`${API_ENDPOINT.API_ENDPOINT}, {
+        fetch(`${API_ENDPOINT.API_ENDPOINT}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
