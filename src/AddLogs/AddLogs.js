@@ -86,7 +86,6 @@ class AddLogs extends Component{
             date_added: new Date()
         };
         console.log(newLog);
-        const logEndPoint = '/api/logs';
 
         fetch(`${API_ENDPOINT.API_ENDPOINT}`, {
             method: 'POST',
@@ -109,7 +108,7 @@ class AddLogs extends Component{
             this.props.history.push('/');
         })  
         .catch((error) => {
-            console.log(error);
+            console.log(error.message);
         })
     };
 
