@@ -86,10 +86,9 @@ class AddLogs extends Component{
             date_added: new Date()
         };
         console.log(newLog);
-        const baseUrl = `${API_ENDPOINT.API_ENDPOINT}`;
         const logEndPoint = '/api/logs';
 
-        fetch(baseUrl + logEndPoint, {
+        fetch(`${API_ENDPOINT.API_ENDPOINT}, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
