@@ -2,16 +2,10 @@ import React, { Component } from 'react';
 import './AddLogs.css';
 import MotionsContext from '../MotionsContext';
 import API_ENDPOINT from '../config';
-import Logs from '../Logs/Logs';
 
 
 class AddLogs extends Component{
     static contextType = MotionsContext;
-
-    // state = {
-    //     error: null,
-    //     logs:this.context.logs
-    // };
 
     constructor(props){
         super(props);
@@ -86,8 +80,8 @@ class AddLogs extends Component{
             date_added: new Date()
         };
         console.log(newLog);
-
-        fetch(`${API_ENDPOINT.API_ENDPOINT}`, {
+        
+        fetch(`${API_ENDPOINT.API_ENDPOINT}/logs`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
