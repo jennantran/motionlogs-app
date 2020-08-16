@@ -6,18 +6,18 @@ import ValidationError from '../ValidationError';
 class SignUp extends Component {
     static contextType = MotionsContext;
         constructor(props){
-        super(props);
-            this.state = {
-                username: {
-                    value:'',
-                    touched: false
-                },
-                password: {
-                    value:'',
-                    touched:false
-                },
+            super(props);
+                this.state = {
+                    username: {
+                        value:'',
+                        touched: false
+                    },
+                    password: {
+                        value:'',
+                        touched:false
+                    },
+                }
             }
-        }
     handleRegistrationRedirect = () => {
         const { history } = this.props;
         history.push('/login');
@@ -56,8 +56,8 @@ class SignUp extends Component {
                 return 'Password must be between 6 and 72 characters long';
             } else if (!password.match(/[0-9]/)) {
                 return 'Password must contain at least one number';
-            }
         }
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();

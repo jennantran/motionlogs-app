@@ -13,16 +13,10 @@ class Workouts extends Component{
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log('was submitted');
         let query = document.getElementById('queryInput').value;
-        console.log(query);
         query = {'query': query};
-        // query = query.trim().replace(/\s/g, '%20')
-        console.log(query);
         const url = `https://trackapi.nutritionix.com/v2/natural/exercise`;
-        
-        console.log(url);
-     
+             
         return fetch(url, {
             method: 'POST',
             body: JSON.stringify(query),
@@ -35,15 +29,12 @@ class Workouts extends Component{
 
             .then(res => res.json())
             .then(data=> {
-                console.log(data);
                 this.setState({
                     results: data.exercises
                 });
-                console.log('set state', data);
-                console.log('data exercise', data.exercises);
             })
             .catch(function(err){
-                console.log('There was a fetch error');
+                throw new Error('There was a fetch error');
             })
       }
     render(){

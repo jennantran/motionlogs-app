@@ -22,8 +22,8 @@ class HomePage extends Component{
                         <p>Log your reps and weights.</p>
                     </div>
                     <div className='details learn'>
-                        <h2>Learn.</h2>
-                        <p>Search for new workouts and incorporte it into your routine.</p>
+                        <h2>Track.</h2>
+                        <p>Figure out your calories expended from your workout.</p>
                     </div>
                     <div className='details accountability'>
                         <h2>Accountability.</h2>
