@@ -40,10 +40,10 @@ Homepage:
 
 
 Logs Page:
-![FavoritesPage](image/Favorites.png)
+
 
 Workout Page:
-![Search Page](image/Searchpage.png)
+
 
 Results: 
 
