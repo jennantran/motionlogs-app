@@ -37,13 +37,16 @@ Run the tests: npm test
 Screenshots
 -----------
 Homepage:
-
+![Homepage](image/motion-homepage.png)
 
 Logs Page:
+![LogsPage](image/motion-logs.png)
 
+Add Logs Form:
+![AddLogs](image/image/motion-addlog.png)
 
 Workout Page:
-
+![WorkoutPage](image/motion-calorie.png)
 
 Results: 
 
