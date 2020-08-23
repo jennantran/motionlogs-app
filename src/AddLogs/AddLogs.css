@@ -1,0 +1,13 @@
+.addLabel{
+    color:grey;
+    padding: 5px;
+
+}
+
+select#rep{
+    margin-left: 10px;
+}
+
+select#set{
+    margin-left: 10px;
+}

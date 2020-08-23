@@ -1,12 +1,31 @@
-div.logContainer{
+/* div.logContainer{
     display:flex;
+} */
+
+.logContainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto; 
+    grid-template-rows: 100px;
+    grid-gap: 0px;
+    border: 1px white solid;
+    width: 90%;
 }
 
 .delete{
     width: 60px;
     height: 40px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
 }
 
-.date{
-    color: white
+span.date{
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.addLog{
+    border-radius:3px;
+    margin-left: 20px;
 }

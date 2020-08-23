@@ -125,7 +125,7 @@ class AddLogs extends Component{
                                 placeholder='workout name'
                                 onChange = {e => this.updateName(e.target.value)}
                             ></input>
-                            <label>Set:
+                            <label className='addLabel'>Set
                                 <select name='set' 
                                         value = {this.state.set.value}
                                         id='set'
@@ -137,7 +137,7 @@ class AddLogs extends Component{
                                     <option value ='5'>5</option>
                                 </select>
                             </label> 
-                            <label>Reps:
+                            <label className='addLabel'>Reps
                                 <select name='rep' 
                                         id='rep'
                                         value = {this.state.rep.value}

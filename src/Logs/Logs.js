@@ -25,6 +25,7 @@ class Logs extends Component{
             <section className='logsList'>
                 <div className='addLogEntry'>
                     <button
+                        className='addLog'
                         onClick={(e) => this.clickAddLog(e)}>Add New Log</button>
                 </div>
                 <h2>Log Entries</h2>
