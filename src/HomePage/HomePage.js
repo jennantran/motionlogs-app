@@ -19,11 +19,11 @@ class HomePage extends Component{
                 <section className='homepgDetails'>
                     <div className='details design'>
                         <h2>Simple.</h2>
-                        <p>Log your reps and weights.</p>
+                        <p>Log your reps and weights and add the workout name.</p>
                     </div>
                     <div className='details learn'>
                         <h2>Track.</h2>
-                        <p>See the amount of calories expended from your workout.</p>
+                        <p>See the amount of calories expended from your workout using the input calculator.</p>
                     </div>
                     <div className='details accountability'>
                         <h2>Accountability.</h2>
