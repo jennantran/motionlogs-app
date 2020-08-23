@@ -13,6 +13,10 @@ class Workouts extends Component{
     }
     handleSubmit = (e) => {
         e.preventDefault();
+        let elem = document.getElementById('resultsTitle');
+        elem.style.display ='block';
+        let el = document.getElementById('calories');
+        el.style.display ='block';
         let query = document.getElementById('queryInput').value;
         query = {'query': query};
         const url = `https://trackapi.nutritionix.com/v2/natural/exercise`;
@@ -63,8 +67,8 @@ class Workouts extends Component{
                             value='calculate' />
                 </form>
                 <section id='results'>
-                    <h2 id='resultsTitle'>Results</h2>
-                        {calories} <p>calories</p>
+                    <h2 id='resultsTitle' style={{display:'none'}}>Results</h2>
+                        {calories} <p id='calories' style={{display:'none'}}>calories</p>
                 </section>
             </div>
         );

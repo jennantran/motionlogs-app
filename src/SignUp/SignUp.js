@@ -98,10 +98,8 @@ class SignUp extends Component {
                     <label className='logPw'>
                         Password:
                         <input
+                            className='logpw'
                             type='password'
-                            name='password'
-                            className='loginInput'     
-                            id='password'
                             onChange = { e => this.updatePassword(e.target.value)}   
                             />
                        {this.state.password.touched && <ValidationError message={passwordError} /> }

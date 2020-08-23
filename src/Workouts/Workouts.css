@@ -7,10 +7,21 @@
 .workoutSearch{
     color: white;
     padding-bottom: 20px;
+    font-family: sans-serif;
 }
 #queryInput{
     width: 200px;
     height: 100px;
+}
+#results{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    margin-top: 80px;
+}
+
+.resultsTitle{
+    font-size: 25px;
 }
 
 @media (min-width: 600px) {

@@ -24,22 +24,29 @@ p{
 
 
 h2{
-    color: #cc0000;
+    color:#e60000;
 }
 
 .homeButton{
-    box-shadow:inset 0px -1px 0px 0px #cf866c;
-	background-color: #cc0000;
+	background-color:#e60000;
 	border-radius:3px;
     border:1px solid #942911;
     color: white;
 	cursor:pointer;
-	font-family:Arial;
+    font-family:sans-serif;
+    font-weight: 550;
 	font-size:14px;
 	padding:13px 36px;
 	text-decoration:none;
-	text-shadow:0px 0px 0px #854629;
+    text-shadow:0px 0px 0px #854629;
+    overflow:hidden;
+    position: relative;
+    transition: background-color .5s;
+    margin-top: 10px;
 
+}
+.homeButton:hover{
+    background-color: #8B0000;
 }
 
 .homepgDetails{

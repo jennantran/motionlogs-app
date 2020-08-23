@@ -1,0 +1,14 @@
+.logpw{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #cc0000;
+    color: #cc0000;
+    padding: 10px;
+    margin: 10px;
+    width: 30vh;
+}
+
+.signUp{
+    color: white;
+    font-size: 45px;
+}
