@@ -29,9 +29,7 @@ label.logEmail{
 
 
 .logSubmit{
-    width: 100px;
-    box-shadow:inset 0px -1px 0px 0px #cf866c;
-	background-color: #cc0000;
+	background-color: #e60000;
 	border-radius:3px;
     border:1px solid #942911;
     color: white;
@@ -41,9 +39,14 @@ label.logEmail{
 	padding:13px 36px;
 	text-decoration:none;
     text-shadow:0px 0px 0px #854629;
-    margin-top: 50px;
+    margin-top: 70px;
+    font-weight: 550;
+    transition: background-color .5s;
 }
 
+.logSubmit:hover{
+    background-color: #8B0000;
+}
 
 @media (min-width: 600px) {
    

@@ -23,11 +23,11 @@ class HomePage extends Component{
                     </div>
                     <div className='details learn'>
                         <h2>Track.</h2>
-                        <p>Figure out your calories expended from your workout.</p>
+                        <p>See the amount of calories expended from your workout.</p>
                     </div>
                     <div className='details accountability'>
                         <h2>Accountability.</h2>
-                        <p>This app encourages you to get stronger as your numbers go up.</p>
+                        <p>As your numbers go up, motivation will come.</p>
                     </div>
                 </section>
             </div>
