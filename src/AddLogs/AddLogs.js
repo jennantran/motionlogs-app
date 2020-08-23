@@ -79,7 +79,6 @@ class AddLogs extends Component{
             user_id: this.context.user_id,
             date_added: new Date()
         };
-        console.log(newLog);
         
         fetch(`${API_ENDPOINT.API_ENDPOINT}/logs`, {
             method: 'POST',
@@ -99,7 +98,7 @@ class AddLogs extends Component{
 
             this.context.addLog(data);
             console.log(data);
-            this.props.history.push('/');
+            this.props.history.push('/logs');
         })  
         .catch((error) => {
             console.log(error.message);

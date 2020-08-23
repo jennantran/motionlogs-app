@@ -1,7 +1,3 @@
-/* div.logContainer{
-    display:flex;
-} */
-
 .logContainer{
     display: grid;
     grid-template-columns: auto auto auto auto auto; 
@@ -10,7 +6,18 @@
     border: 1px white solid;
     width: 90%;
 }
+button.addLog{
+    cursor: pointer;
+    font-family: sans-serif;
+}
+button.addLog:hover{
+    background-color: grey;
+    color: white;
+}
 
+p {
+    font-size: 18px;
+}
 .delete{
     width: 60px;
     height: 40px;
@@ -29,3 +36,20 @@ span.date{
     border-radius:3px;
     margin-left: 20px;
 }
+
+
+
+@media (min-width: 600px) {
+    .logContainer{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto; 
+        grid-template-rows: 100px;
+        grid-gap: 0px;
+        border: 1px white solid;
+        width: 90%;
+    }
+    p {
+      font-size: 22px;    
+    }
+  }
+        
