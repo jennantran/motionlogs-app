@@ -33,7 +33,6 @@ class AddLogs extends Component{
          }
     }
     updateName(name){
-        console.log({name});
         this.setState({
             wout_name: {
                 value: name,
@@ -42,7 +41,6 @@ class AddLogs extends Component{
         });
     }
     updateSet(set){
-        console.log({set});
         this.setState({
             set: {
                 value: set,
@@ -51,7 +49,6 @@ class AddLogs extends Component{
         });
     }
     updateWeight(weight){
-        console.log({weight});
         this.setState({
             weight: {
                 value: weight,
@@ -60,7 +57,6 @@ class AddLogs extends Component{
         });
     }
     updateRep(rep){
-        console.log({rep});
         this.setState({
             rep: {
                 value: rep,
@@ -79,7 +75,6 @@ class AddLogs extends Component{
             user_id: this.context.user_id,
             date_added: new Date()
         };
-        console.log(newLog);
         
         fetch(`${API_ENDPOINT.API_ENDPOINT}/logs`, {
             method: 'POST',
@@ -89,7 +84,6 @@ class AddLogs extends Component{
             body: JSON.stringify(newLog)
         })
         .then((res)=> {
-            console.log(res);
             if(!res.ok){
                 return res.json().then(e => Promise.reject(e));
             }
@@ -98,65 +92,12 @@ class AddLogs extends Component{
         .then((data)=> {
 
             this.context.addLog(data);
-            console.log(data);
             this.props.history.push('/');
         })  
         .catch((error) => {
             console.log(error.message);
         })
     };
-
-       // handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const { name, set, rep, weight } = e.target;
-    //     let tempLogs = this.state.logs;
-    //     console.log(e.target);
-    //     console.log(weight);
-    //     console.log(name);
-    //     const log = {
-    //         name: name.value,
-    //         set: set.value,
-    //         rep: rep.value,
-    //         weight: weight.value,
-    //         id: tempLogs.length-1,
-    //         modified: new Date(),
-    //     }
-
-    //     tempLogs.push(log);
-    //     console.log(tempLogs);
-        
-    //     this.setState({
-    //         logs: tempLogs
-    //     })
-
-    // this.setState({ error: null })
-    //      fetch(`https://cors-anywhere.herokuapp.com/${config.API_ENDPOINT}`, {
-    //           method: 'POST',
-    //           body: JSON.stringify(log),
-    //           headers: {
-    //             'content-type': 'application/json',
-    //          }
-    //      })
-    //    .then(res => {
-    //         if(!res.ok){
-    //              return res.json().then(error => {
-    //                  throw error;
-      
-    //             })
-    //          }
-    //         return res.json();
-    //      })
-    //     .then(data => {
-    //          name.value = ''
-    //          set.value = ''
-    //          rep.value = ''
-    //          weight.value = ''
-    //          this.context.addLog(data)
-    //         this.props.history.push('/')
-    //      })
-    //      .catch(error => {
-    //         this.setState({ error })
-    //    })
     
     render(){
         const { error } = this.state;
