@@ -11,3 +11,17 @@ select#rep{
 select#set{
     margin-left: 10px;
 }
+
+@media (max-width: 600px) {
+    .newEntry{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    select#rep{
+        margin-left: 20px;
+    }
+    select#set{
+        margin-left: 35px;
+    }
+  }

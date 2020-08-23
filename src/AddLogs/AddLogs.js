@@ -116,7 +116,7 @@ class AddLogs extends Component{
                         <div className='addError'>{error && <p>{error.message}</p>}</div>
                         <label>Workout Name</label> 
                         {this.state.wout_name.touched}
-                        <div>
+                        <div className='newEntry'>
                             <input 
                                 required
                                 type='text'

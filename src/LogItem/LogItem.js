@@ -42,10 +42,10 @@ class LogItem extends Component{
         return(
                     <div className='logContainer'
                             id={this.props.id}>
-                        <p>Workout Name: &nbsp; {this.props.name}&nbsp;</p>
+                        <p>Workout: &nbsp; {this.props.name}&nbsp;</p>
                         <p>Set:&nbsp;  {this.props.set}&nbsp;</p>
-                        <p>Reps:&nbsp; {this.props.rep}&nbsp;</p>
-                        <p>Weight: &nbsp; {this.props.weight}&nbsp;</p>
+                        <p>Rep:&nbsp; {this.props.rep}&nbsp;</p>
+                        <p>Wt: &nbsp; {this.props.weight}&nbsp;</p>
                         <span className='date'>
                         {(date) ? format(new Date(date), 'dd-MM-yyyy') : ''}
                         </span>
