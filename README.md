@@ -43,12 +43,11 @@ Logs Page:
 ![LogsPage](image/motion-logs.png)
 
 Add Logs Form:
-![AddLogs](image/image/motion-addlog.png)
+![AddLogs](image/motion-addlog.png)
 
 Workout Page:
 ![WorkoutPage](image/motion-calorie.png)
 
-Results: 
 
 * * *
 
