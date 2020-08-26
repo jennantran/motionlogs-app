@@ -62,7 +62,6 @@ class App extends Component {
     this.setState({
         logs: [...this.state.logs, log]
     })
-    setTimeout(() => console.log(this.state)); 
   }
 
   setLog = logs => {
