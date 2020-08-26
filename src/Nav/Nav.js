@@ -58,7 +58,7 @@ class Nav extends Component{
                      </ul>
                 </div>
             </section>
-        );
+        )
     }
 }
 

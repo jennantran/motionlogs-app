@@ -3,7 +3,6 @@ import './Workouts.css';
 import Workout from '../Workout/Workout';
 import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
-
 class Workouts extends Component{
     constructor(props){
         super(props);
@@ -42,36 +41,36 @@ class Workouts extends Component{
             })
       }
     render(){
-            let results = this.state.results;
-            const calories = results.map((caloriesItem) =>{
-                return <section>
-                            <p>{caloriesItem.nf_calories}</p>
-                      </section>
-            })
-            
-        return(
-            <div>
-                <h2 className='workoutsHeader'>Calories Burned</h2>
-                <form className='searchBox'
-                      onSubmit = { e => this.handleSubmit(e)}> 
-                    <label className='workoutSearch'
-                           >
-                            Enter your workout: 
-                         
-                        </label>
-                        <input id='queryInput'
-                            placeholder='ex: run 10 miles...'></input>
-                        <input   
-                            className='logSubmit'
-                            type='submit' 
-                            value='calculate' />
-                </form>
-                <section id='results'>
-                    <h2 id='resultsTitle' style={{display:'none'}}>Results</h2>
-                        {calories} <p id='calories' style={{display:'none'}}>calories</p>
-                </section>
-            </div>
-        );
+        let results = this.state.results;
+        const calories = results.map((caloriesItem) =>{
+            return <section>
+                        <p>{caloriesItem.nf_calories}</p>
+                    </section>
+    })
+    
+    return(
+        <div>
+            <h2 className='workoutsHeader'>Calories Burned</h2>
+            <form className='searchBox'
+                    onSubmit = { e => this.handleSubmit(e)}> 
+                <label className='workoutSearch'
+                        >
+                        Enter your workout: 
+                        
+                </label>
+                <input id='queryInput'
+                    placeholder='ex: run 10 miles...'></input>
+                <input   
+                    className='logSubmit'
+                    type='submit' 
+                    value='calculate' />
+            </form>
+            <section id='results'>
+                <h2 id='resultsTitle' style={{display:'none'}}>Results</h2>
+                    {calories} <p id='calories' style={{display:'none'}}>calories</p>
+            </section>
+        </div>
+        )
     }
 }
 

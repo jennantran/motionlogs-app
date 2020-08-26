@@ -38,7 +38,7 @@ class AddLogs extends Component{
                 value: name,
                 touched: true
             }
-        });
+        })
     }
     updateSet(set){
         this.setState({
@@ -46,7 +46,7 @@ class AddLogs extends Component{
                 value: set,
                 touched: true
             }
-        });
+        })
     }
     updateWeight(weight){
         this.setState({
@@ -54,7 +54,7 @@ class AddLogs extends Component{
                 value: weight,
                 touched: true
             }
-        });
+        })
     }
     updateRep(rep){
         this.setState({
@@ -62,7 +62,7 @@ class AddLogs extends Component{
                 value: rep,
                 touched: true
             }
-        });
+        })
     }
     handleSubmit(e){
         e.preventDefault();
@@ -74,7 +74,7 @@ class AddLogs extends Component{
             weight: this.state.weight.value,
             user_id: this.context.user_id,
             date_added: new Date()
-        };
+        }
         
         fetch(`${API_ENDPOINT.API_ENDPOINT}/logs`, {
             method: 'POST',
@@ -97,9 +97,8 @@ class AddLogs extends Component{
         .catch((error) => {
             console.log(error.message);
         })
-    };
+    }
 
-   
     render(){
         const { error } = this.state;
         return(
@@ -159,8 +158,8 @@ class AddLogs extends Component{
                         </div> 
                     </form>
             </div>
-        );
+            )
+        }
     }
-}
 
 export default AddLogs;

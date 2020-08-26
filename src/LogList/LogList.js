@@ -25,9 +25,9 @@ class LogList extends Component{
                             onDelete={this.onDelete}
                         />
                         </li>)}
-                </ul>
+                 </ul>
             </section>
-        );
+        )
     }
 }
 

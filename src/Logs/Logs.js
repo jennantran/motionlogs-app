@@ -10,7 +10,7 @@ class Logs extends Component{
         logs: this.context, 
         error: null,
     };
-    
+
     clickAddLog(e){
         this.props.history.push('/addLogs');
     }
@@ -43,7 +43,7 @@ class Logs extends Component{
                     )}
                 </div>
             </section>
-        );
+        )
     }
 }
 

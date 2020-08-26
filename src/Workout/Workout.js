@@ -7,7 +7,7 @@ class Workout extends Component{
                 <p>{this.props.name}</p>
                 <p>{this.props.description}</p>
              </section>
-        );
+        )
     }
 }
 

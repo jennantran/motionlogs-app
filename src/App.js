@@ -11,7 +11,7 @@ import HomePage from './HomePage/HomePage';
 import Login from './Login/Login';
 import Workouts from './Workouts/Workouts';
 import AddLogs from './AddLogs/AddLogs';
-import Logs from './Logs/Logs'
+import Logs from './Logs/Logs';
 
 
 class App extends Component {
@@ -23,6 +23,7 @@ class App extends Component {
     log_id:'',
     addUser: this.addUser
   };
+
   handlePostAuthenticate = ({ username, password, user_id }) => {
     AuthApiService.postLogin({
       username: username.value,
@@ -53,9 +54,9 @@ class App extends Component {
             })
             .catch((error) => {
               console.error(error);
-            });
+            })
          })    
-      };
+      }
 
   addLog = log => {
     this.setState({
@@ -71,11 +72,10 @@ class App extends Component {
     })
   }
 
- 
   deleteLog = log_id => {
     this.setState({
       logs: this.state.logs.filter(log => log.id != log_id)
-    });
+    })
   }
 
   addUser = (username) => {
@@ -90,14 +90,15 @@ class App extends Component {
       (!res.ok)
         ? res.json().then(e => Promise.reject(e))
         : res.json(),
-      )
+    )
   }
 
   clearLogs = () => {
     this.setState({
       logs: [],
-    });
+    })
   }
+
   render(){
     const contextValue = {
       logs: this.state.logs,
@@ -107,8 +108,9 @@ class App extends Component {
       log_id: this.state.log_id,
       addUser: this.addUser,
       handlePostAuthenticate: this. handlePostAuthenticate,
-      clearLogs: this.clearLogs
-    }
+      clearLogs: this.clearLogs,
+    };
+
     return (
       <div className='app'>
         <MotionsContext.Provider value = {contextValue}>
@@ -123,7 +125,7 @@ class App extends Component {
           </main>
         </MotionsContext.Provider>
      </div>
-    );
+    )
   }
 }
 

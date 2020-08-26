@@ -21,11 +21,11 @@ class Login extends Component {
     }
 
     updateUsername(username) {
-        this.setState({username: {value: username, touched: true}});
+        this.setState({username: {value: username, touched: true}})
     }
         
     updatePassword(password) {
-        this.setState({password: {value: password, touched: true}});
+        this.setState({password: {value: password, touched: true}})
     }
 
     validateUsername() {
@@ -55,6 +55,7 @@ class Login extends Component {
     render(){
         const userError = this.validateUsername();
         const passwordError = this.validatePassword();
+
         return(   
             <section className = 'loginFrom'>
                 <form className='userForm' onSubmit={ e => this.handleSubmit(e)}>
@@ -72,7 +73,7 @@ class Login extends Component {
                     <label className='logPw'>
                         Password:
                         <input
-                            type='text'
+                            type='password'
                             name='password'
                             id='password'
                             className='loginInput'
@@ -86,7 +87,7 @@ class Login extends Component {
                         value='submit' />
                 </form>
             </section>
-        );
+        )
     }
 }
 

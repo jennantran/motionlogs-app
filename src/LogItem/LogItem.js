@@ -39,6 +39,7 @@ class LogItem extends Component{
 
     render(){
         const { date } = this.props;
+
         return(
                     <div className='logContainer'
                             id={this.props.id}>
@@ -50,9 +51,9 @@ class LogItem extends Component{
                         {(date) ? format(new Date(date), 'dd-MM-yyyy') : ''}
                         </span>
                         <button className='delete'
-                                  onClick={this.handleDelete}>Delete</button>
+                                onClick={this.handleDelete}>Delete</button>
                     </div>             
-        );
+             )
+         }
     }
-}
 export default LogItem;

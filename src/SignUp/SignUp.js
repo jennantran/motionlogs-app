@@ -15,9 +15,9 @@ class SignUp extends Component {
                     password: {
                         value:'',
                         touched:false
-                    },
-                }
+                },
             }
+        }
     handleRegistrationRedirect = () => {
         const { history } = this.props;
         history.push('/login');
@@ -65,7 +65,7 @@ class SignUp extends Component {
         const newUser = { username, password };
         this.context.addUser(newUser);
         this.handleRegistrationRedirect();
-        }
+    }
 
     handleVerify = (e) => {
         if(!this.state.username.value || !this.state.password.value){
@@ -110,9 +110,8 @@ class SignUp extends Component {
                         value='submit' />
                 </form>        
             </section>
-        );
+        )
     }
 }
-
 
 export default SignUp;
