@@ -43,7 +43,7 @@ class LogItem extends Component{
         return(
                     <div className='logContainer'
                             id={this.props.id}>
-                        <p>Workout: &nbsp; {this.props.name}&nbsp;</p>
+                        <p> {this.props.name}&nbsp;</p>
                         <p>Set:&nbsp;  {this.props.set}&nbsp;</p>
                         <p>Rep:&nbsp; {this.props.rep}&nbsp;</p>
                         <p>Wt: &nbsp; {this.props.weight}&nbsp;</p>

@@ -4,7 +4,7 @@
     grid-template-rows: 70px;
     grid-gap: 0px;
     border: 1px white solid;
-    width: 90%;
+    width: 94%;
 }
 button.addLog{
     cursor: pointer;
@@ -17,6 +17,7 @@ button.addLog:hover{
 
 p {
     font-size: 16px;
+    padding: 5px;
 }
 .delete{
     width: 60px;
