@@ -36,7 +36,6 @@ class LogItem extends Component{
         })
     }
   
-
     render(){
         const { date } = this.props;
 

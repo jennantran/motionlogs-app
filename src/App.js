@@ -12,18 +12,43 @@ import Login from './Login/Login';
 import Workouts from './Workouts/Workouts';
 import AddLogs from './AddLogs/AddLogs';
 import Logs from './Logs/Logs';
-
+import { Link, useHistory } from 'react-router-dom';
 
 class App extends Component {
-  state = {
-    logs: [],
-    user_id: '', 
-    addLog: this.addLog,
-    error: null,
-    log_id:'',
-    addUser: this.addUser
+  constructor(){
+    super();
+    this.state = {
+      logs: JSON.parse(localStorage.getItem('logs')) || [],
+      user_id: '', 
+      addLog: this.addLog,
+      error: null,
+      log_id:'',
+      addUser: this.addUser,
+    }
+    if (window.performance) {
+      if (performance.navigation.type == 1) {
+          alert('The page is reloading. Log back in to access logs');
+      } else {
+          alert('This page is not reloaded');
+      }
+    }
   };
-
+  
+  testfunction(){
+    this.props.history.push('/addLogs');
+  }
+  onUnload(event) { 
+    this.testfunction();
+  }
+  
+  componentDidMount() {
+    window.addEventListener('beforeunload', this.onUnload)
+  }
+  
+  componentWillUnmount() {
+     window.removeEventListener('beforeunload', this.onUnload)
+  }
+ 
   handlePostAuthenticate = ({ username, password, user_id }) => {
     AuthApiService.postLogin({
       username: username.value,
@@ -61,6 +86,8 @@ class App extends Component {
   addLog = log => {
     this.setState({
         logs: [...this.state.logs, log]
+    },() => {
+      localStorage.setItem('logs', JSON.stringify(this.state.logs));
     })
   }
 
@@ -109,6 +136,7 @@ class App extends Component {
       handlePostAuthenticate: this. handlePostAuthenticate,
       clearLogs: this.clearLogs,
     };
+  
 
     return (
       <div className='app'>
