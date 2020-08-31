@@ -17,6 +17,7 @@ class Login extends Component {
                 value:'',
                 touched:false
             },
+            error: this.context,
         }
     }
 
@@ -49,13 +50,11 @@ class Login extends Component {
       }
     handleSubmit = (e) => {
         e.preventDefault();
-        // this.context.handlePostAuthenticate(this.state);
-        // this.props.history.push('/logs');
         try { 
             this.context.handlePostAuthenticate(this.state); 
             this.props.history.push('/logs'); 
-        } catch(error) {  
-            throw new Error('invalid user and pw');
+        } catch(err) {    
+           console.log(err);
         }
     }
     render(){
@@ -92,6 +91,7 @@ class Login extends Component {
                         type='submit' 
                         value='submit' />
                 </form>
+                {this.context.error && <p>{this.context.error}</p>}
             </section>
         )
     }

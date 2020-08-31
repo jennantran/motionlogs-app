@@ -81,9 +81,12 @@ class App extends Component {
               console.error(error);
             })
          })  
-         .catch((error) => {
-           throw new Error('invalid username or password')
-         })  
+
+          .catch((error) => { 
+            this.setState({
+              error
+            })
+        })  
       }
 
   addLog = log => {
@@ -136,8 +139,9 @@ class App extends Component {
       user_id: this.state.user_id,
       log_id: this.state.log_id,
       addUser: this.addUser,
-      handlePostAuthenticate: this. handlePostAuthenticate,
+      handlePostAuthenticate: this.handlePostAuthenticate,
       clearLogs: this.clearLogs,
+      error: this.state.error
     };
   
 

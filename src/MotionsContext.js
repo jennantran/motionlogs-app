@@ -5,6 +5,7 @@ const MotionsContext = React.createContext({
     addLogs: () => {},
     deleteLog: () => {},
     user_id: '',
+    error: null
 })
 
 export default MotionsContext;

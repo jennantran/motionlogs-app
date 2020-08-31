@@ -21,6 +21,7 @@ class Logs extends Component{
     render(){
         const { page } = this.state;
         const { logs } = this.context; 
+        const { error } = this.state;
         return(
             <section className='logsList'>
                 <div className='addLogEntry'>
