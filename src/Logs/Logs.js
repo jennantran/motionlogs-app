@@ -8,7 +8,6 @@ class Logs extends Component{
     state = {
         page: 'list',
         logs: this.context, 
-        error: null,
     };
 
     clickAddLog(e){
@@ -43,6 +42,7 @@ class Logs extends Component{
                         />
                     )}
                 </div>
+                {this.context.error && <p className='error'>{this.context.error}</p>}
             </section>
         )
     }

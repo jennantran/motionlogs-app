@@ -61,6 +61,7 @@ class Login extends Component {
         const userError = this.validateUsername();
         const passwordError = this.validatePassword();
 
+
         return(   
             <section className = 'loginFrom'>
                 <form className='userForm' onSubmit={ e => this.handleSubmit(e)}>
@@ -91,7 +92,6 @@ class Login extends Component {
                         type='submit' 
                         value='submit' />
                 </form>
-                {this.context.error && <p className='error'>{this.context.error}</p>}
             </section>
         )
     }
