@@ -26,7 +26,7 @@ class App extends Component {
       addUser: this.addUser,
     }
     if (window.performance) {
-      if (performance.navigation.type == 1) {
+      if (performance.navigation) {
           alert('The page is reloading. Log back in to access logs');
       } else {
           alert('This page is not reloaded');
@@ -80,7 +80,10 @@ class App extends Component {
             .catch((error) => {
               console.error(error);
             })
-         })    
+         })  
+         .catch((error) => {
+           throw new Error('invalid username or password')
+         })  
       }
 
   addLog = log => {
