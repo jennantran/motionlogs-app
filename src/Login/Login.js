@@ -17,7 +17,6 @@ class Login extends Component {
                 value:'',
                 touched:false
             },
-            error: this.context,
         }
     }
 
@@ -50,6 +49,7 @@ class Login extends Component {
       }
     handleSubmit = (e) => {
         e.preventDefault();
+        console.log(this.context.error);
         try { 
             this.context.handlePostAuthenticate(this.state); 
             this.props.history.push('/logs'); 
@@ -91,7 +91,7 @@ class Login extends Component {
                         type='submit' 
                         value='submit' />
                 </form>
-                {this.state.error && <p className='error'>{this.state.error}</p>}
+                {this.context.error && <p className='error'>{this.context.error}</p>}
             </section>
         )
     }
