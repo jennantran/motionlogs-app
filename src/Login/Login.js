@@ -91,7 +91,7 @@ class Login extends Component {
                         type='submit' 
                         value='submit' />
                 </form>
-                {this.context.error && <p>{this.context.error}</p>}
+                {this.state.error && <p className='error'>{this.state.error}</p>}
             </section>
         )
     }

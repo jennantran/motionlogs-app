@@ -36,7 +36,9 @@ input[type=password] {
 label.logEmail{
     margin-bottom: 40px;
 }
-
+.error{
+    color: red;
+}
 
 .logSubmit{
 	background-color: #e60000;
