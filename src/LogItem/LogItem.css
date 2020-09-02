@@ -1,10 +1,15 @@
 .logContainer{
     display: grid;
-    grid-template-columns: auto auto auto auto auto; 
+    grid-template-columns: auto auto auto auto; 
     grid-template-rows: 70px;
     grid-gap: 0px;
     border: 1px white solid;
     width: 94%;
+}
+.logContainer p{
+    margin-top: auto;
+    margin-bottom: auto;
+    white-space: nowrap;
 }
 button.addLog{
     cursor: pointer;
@@ -32,6 +37,7 @@ span.date{
     margin-top: auto;
     margin-bottom: auto;
     font-size: 12px;
+    white-space: nowrap;
 }
 
 .addLog{

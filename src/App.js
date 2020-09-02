@@ -86,7 +86,6 @@ class App extends Component {
             this.setState({
               error: error.error
             })
-            console.log(error);
         })  
       }
 

@@ -49,12 +49,11 @@ class Login extends Component {
       }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.context.error);
         try { 
             this.context.handlePostAuthenticate(this.state); 
             this.props.history.push('/logs'); 
         } catch(err) {    
-           console.log(err);
+           throw new Error(err);
         }
     }
     render(){

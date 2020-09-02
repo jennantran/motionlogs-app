@@ -95,7 +95,7 @@ class AddLogs extends Component{
             this.props.history.push('/logs');
         })  
         .catch((error) => {
-            console.log(error.message);
+            throw new Error(error.message);
         })
     }
 
@@ -144,7 +144,7 @@ class AddLogs extends Component{
                             <label>Weight</label> 
                             <input 
                                 required
-                                type='text'
+                                type='number'
                                 name='weight'
                                 placeholder='weight lbs'
                                 onChange = {e => this.updateWeight(e.target.value)}

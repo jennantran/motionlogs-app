@@ -46,11 +46,11 @@ class LogItem extends Component{
                         <p>Set:&nbsp;  {this.props.set}&nbsp;</p>
                         <p>Rep:&nbsp; {this.props.rep}&nbsp;</p>
                         <p>Wt: &nbsp; {this.props.weight}&nbsp;</p>
-                        <span className='date'>
-                        {(date) ? format(new Date(date), 'dd-MM-yyyy') : ''}
-                        </span>
                         <button className='delete'
                                 onClick={this.handleDelete}>Delete</button>
+                                   <span className='date'>
+                        {(date) ? format(new Date(date), 'dd-MM-yyyy') : ''}
+                        </span>
                     </div>             
              )
          }
