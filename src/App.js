@@ -75,6 +75,7 @@ class App extends Component {
                 this.setState({
                   logs: responseJson,
                 });
+                this.clearError();
               }
             })
             .catch((error) => {
@@ -88,6 +89,12 @@ class App extends Component {
             })
         })  
       }
+
+  clearError = error => {
+    this.setState({
+        error: null,
+    })
+  }
 
   addLog = log => {
     this.setState({
