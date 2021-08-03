@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the LogIn UI as expected 1`] = `
+<div
+  className="app"
+>
+  <nav>
+    <section
+      className="nav"
+    >
+      <div
+        className="appName"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <h2>
+            Motion Logs
+          </h2>
+        </a>
+      </div>
+      <div
+        className="navLinks"
+      >
+        <ul>
+          <li>
+            <a
+              href="/workouts"
+              onClick={[Function]}
+            >
+              Workouts
+            </a>
+          </li>
+          <li
+            className="notLogged-in"
+          >
+            <a
+              href="/login"
+              onClick={[Function]}
+            >
+              Log in
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </nav>
+  <main
+    className="App"
+  >
+    <div>
+      <section
+        className="homepage"
+      >
+        <h1
+          className="homeHeader"
+        >
+          Make your fitness journey EASIER!
+        </h1>
+        <p>
+          Track your progress.
+        </p>
+        <button
+          className="homeButton"
+          onClick={[Function]}
+        >
+          Join now
+        </button>
+      </section>
+      <section
+        className="homepgDetails"
+      >
+        <div
+          className="details design"
+        >
+          <h2>
+            Simple.
+          </h2>
+          <p>
+            Log your reps and weights and add the workout name.
+          </p>
+        </div>
+        <div
+          className="details learn"
+        >
+          <h2>
+            Track.
+          </h2>
+          <p>
+            See the amount of calories expended from your workout using the input calculator.
+          </p>
+        </div>
+        <div
+          className="details accountability"
+        >
+          <h2>
+            Accountability.
+          </h2>
+          <p>
+            As your numbers go up, motivation will come.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+`;

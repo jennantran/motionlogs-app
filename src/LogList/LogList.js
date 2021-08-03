@@ -14,8 +14,9 @@ class LogList extends Component{
             <section>
                 <ul className='logList'>
                     {logs.map(log => 
-                    <li>
+                    <li key={log.id}>
                         <LogItem 
+                  
                             id={log.id}
                             name={log.name}
                             set={log.set}

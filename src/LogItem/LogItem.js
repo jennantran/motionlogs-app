@@ -48,7 +48,7 @@ class LogItem extends Component{
                         <p>Wt: &nbsp; {this.props.weight}&nbsp;</p>
                         <button className='delete'
                                 onClick={this.handleDelete}>Delete</button>
-                                   <span className='date'>
+                        <span className='date'>
                         {(date) ? format(new Date(date), 'dd-MM-yyyy') : ''}
                         </span>
                     </div>             

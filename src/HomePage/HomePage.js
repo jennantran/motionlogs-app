@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import './HomePage.css';
 
 class HomePage extends Component{
-    handleClick(e) {
+    handleClick = (e) => {
         this.props.history.push('/signup');
     }
     render(){

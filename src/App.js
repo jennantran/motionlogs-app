@@ -17,7 +17,7 @@ import { Link, useHistory } from 'react-router-dom';
 class App extends Component {
   constructor(){
     super();
-    this.state = {
+      this.state = {
       logs: JSON.parse(localStorage.getItem('logs')) || [],
       user_id: '', 
       addLog: this.addLog,
@@ -84,9 +84,7 @@ class App extends Component {
          })  
 
           .catch((error) => { 
-            this.setState({
-              error: error.error
-            })
+            console.error(error);
         })  
       }
 
