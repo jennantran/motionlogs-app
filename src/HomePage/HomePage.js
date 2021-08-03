@@ -11,7 +11,7 @@ class HomePage extends Component{
             <div>
                 <section className='homepage'>
                     <h1 className='homeHeader'>Make your fitness journey EASIER!</h1>
-                    <p>Track your progress.</p>
+                    <p className='track'>Track your progress.</p>
                     <button 
                         className='homeButton' 
                         onClick={e => this.handleClick(e)}>Join now</button>

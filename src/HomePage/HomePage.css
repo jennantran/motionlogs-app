@@ -9,17 +9,20 @@
 
 .homeHeader{
     color: white;
-    font-family: 'Slab';
+    font-family: 'Candara';
     font-size: 40px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
+.track{
+    font-size: 36px;
+}
 p{
     color: white;
-    font-family: 'sans-serif';
-    font-size: 25px;
+    font-family: 'Candara';
+    font-size: 32px;
 }
 
 
@@ -29,11 +32,11 @@ h2{
 
 .homeButton{
 	background-color:#e60000;
-	border-radius:3px;
+	border-radius: 10px;
     border:1px solid #942911;
     color: white;
 	cursor:pointer;
-    font-family:sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 550;
 	font-size:14px;
 	padding:13px 36px;
@@ -63,7 +66,7 @@ h2{
 
 }
 .details p{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
@@ -80,8 +83,17 @@ h2{
         text-align: left;
     }
     .details p{
-        font-size: 20px;
+        font-size: 27px;
     }
-    
+    .homeHeader{
+        color: white;
+        font-size: 50px;
+    }
+
+.homeButton{
+    border:1px solid #942911;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size:18px;
+}
   }
         
