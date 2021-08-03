@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/motionlogs-app/static/css/main.a9033d70.chunk.css",
-    "main.js": "/motionlogs-app/static/js/main.c77ada85.chunk.js",
-    "main.js.map": "/motionlogs-app/static/js/main.c77ada85.chunk.js.map",
-    "runtime-main.js": "/motionlogs-app/static/js/runtime-main.58c8ad0d.js",
-    "runtime-main.js.map": "/motionlogs-app/static/js/runtime-main.58c8ad0d.js.map",
-    "static/js/2.71619b9d.chunk.js": "/motionlogs-app/static/js/2.71619b9d.chunk.js",
-    "static/js/2.71619b9d.chunk.js.map": "/motionlogs-app/static/js/2.71619b9d.chunk.js.map",
-    "index.html": "/motionlogs-app/index.html",
-    "precache-manifest.93a41cabd96769f89b5c1d45af25125b.js": "/motionlogs-app/precache-manifest.93a41cabd96769f89b5c1d45af25125b.js",
-    "service-worker.js": "/motionlogs-app/service-worker.js",
-    "static/css/main.a9033d70.chunk.css.map": "/motionlogs-app/static/css/main.a9033d70.chunk.css.map",
-    "static/js/2.71619b9d.chunk.js.LICENSE.txt": "/motionlogs-app/static/js/2.71619b9d.chunk.js.LICENSE.txt",
-    "static/media/HomePage.css": "/motionlogs-app/static/media/barbellshadow.406d66a6.jpg"
+    "main.css": "/static/css/main.4412a938.chunk.css",
+    "main.js": "/static/js/main.d4afdde2.chunk.js",
+    "main.js.map": "/static/js/main.d4afdde2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5e7877a4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5e7877a4.js.map",
+    "static/js/2.fd8645d4.chunk.js": "/static/js/2.fd8645d4.chunk.js",
+    "static/js/2.fd8645d4.chunk.js.map": "/static/js/2.fd8645d4.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.cf59cc6924273457b90565f224534db3.js": "/precache-manifest.cf59cc6924273457b90565f224534db3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4412a938.chunk.css.map": "/static/css/main.4412a938.chunk.css.map",
+    "static/js/2.fd8645d4.chunk.js.LICENSE.txt": "/static/js/2.fd8645d4.chunk.js.LICENSE.txt",
+    "static/media/HomePage.css": "/static/media/barbellshadow.406d66a6.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.58c8ad0d.js",
-    "static/js/2.71619b9d.chunk.js",
-    "static/css/main.a9033d70.chunk.css",
-    "static/js/main.c77ada85.chunk.js"
+    "static/js/runtime-main.5e7877a4.js",
+    "static/js/2.fd8645d4.chunk.js",
+    "static/css/main.4412a938.chunk.css",
+    "static/js/main.d4afdde2.chunk.js"
   ]
 }
