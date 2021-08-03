@@ -26,7 +26,8 @@ li{
 a{
     text-decoration: none;
     color:#cc0000;
-    font-family: 'sans-serif';
+    font-family: 'Candara';
+    font-size: 22px;
   
 }
 a:hover {
@@ -37,6 +38,6 @@ a:hover {
 @media screen and (min-width:800px) {
 
 a{
-    font-size: 20px; 
+    font-size: 25px; 
 }
 }

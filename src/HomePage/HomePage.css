@@ -11,13 +11,13 @@
     color: white;
     font-family: 'Candara';
     font-size: 40px;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .track{
-    font-size: 36px;
+    font-size: 28px;
 }
 p{
     color: white;
@@ -39,14 +39,12 @@ h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 550;
 	font-size:14px;
-	padding:13px 36px;
+	padding:15px 36px;
 	text-decoration:none;
     text-shadow:0px 0px 0px #854629;
-    overflow:hidden;
     position: relative;
     transition: background-color .5s;
     margin-top: 10px;
-
 }
 .homeButton:hover{
     background-color: #8B0000;
@@ -60,7 +58,7 @@ h2{
 }
 
 .details{
-    width: 70%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 
@@ -90,10 +88,13 @@ h2{
         font-size: 50px;
     }
 
-.homeButton{
-    border:1px solid #942911;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size:18px;
-}
+    .homeButton{
+        border:1px solid #942911;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size:18px;
+    }
+    .track{
+        font-size: 36px;
+    }
   }
         
