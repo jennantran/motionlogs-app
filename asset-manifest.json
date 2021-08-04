@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.4412a938.chunk.css",
-    "main.js": "/static/js/main.be3e72c5.chunk.js",
-    "main.js.map": "/static/js/main.be3e72c5.chunk.js.map",
+    "main.css": "/static/css/main.b6c6d1e0.chunk.css",
+    "main.js": "/static/js/main.fc56efa6.chunk.js",
+    "main.js.map": "/static/js/main.fc56efa6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5e7877a4.js",
     "runtime-main.js.map": "/static/js/runtime-main.5e7877a4.js.map",
     "static/js/2.fd8645d4.chunk.js": "/static/js/2.fd8645d4.chunk.js",
     "static/js/2.fd8645d4.chunk.js.map": "/static/js/2.fd8645d4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.82b8d1b54fb9c31198009ecd0a654ec3.js": "/precache-manifest.82b8d1b54fb9c31198009ecd0a654ec3.js",
+    "precache-manifest.6026e13a7a882a27fda7a0b0d097e6ef.js": "/precache-manifest.6026e13a7a882a27fda7a0b0d097e6ef.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.4412a938.chunk.css.map": "/static/css/main.4412a938.chunk.css.map",
+    "static/css/main.b6c6d1e0.chunk.css.map": "/static/css/main.b6c6d1e0.chunk.css.map",
     "static/js/2.fd8645d4.chunk.js.LICENSE.txt": "/static/js/2.fd8645d4.chunk.js.LICENSE.txt",
     "static/media/HomePage.css": "/static/media/barbellshadow.406d66a6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5e7877a4.js",
     "static/js/2.fd8645d4.chunk.js",
-    "static/css/main.4412a938.chunk.css",
-    "static/js/main.be3e72c5.chunk.js"
+    "static/css/main.b6c6d1e0.chunk.css",
+    "static/js/main.fc56efa6.chunk.js"
   ]
 }
