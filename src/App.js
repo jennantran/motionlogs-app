@@ -71,7 +71,7 @@ class App extends Component {
             })
             .then((response) => response.json())
             .then((responseJson) => {
-              if (responseJson.success && responseJson.success === false) {
+              if (!responseJson.success || responseJson.success === false) {
                 throw new Error('error in getting logs');
               } else {
                 this.setState({
