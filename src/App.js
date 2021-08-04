@@ -18,38 +18,38 @@ class App extends Component {
   constructor(){
     super();
       this.state = {
-      logs: [],
+      logs: JSON.parse(localStorage.getItem('logs')) || [],
       user_id: '', 
       addLog: this.addLog,
       error: null,
       log_id:'',
       addUser: this.addUser,
     }
-    // if (window.performance) {
-    //   if (performance.navigation) {
-    //       alert('The page is reloading. Log back in to access logs');
-    //   } else {
-    //       alert('This page is not reloaded');
-    //   }
-    // }
+    if (window.performance) {
+      if (performance.navigation) {
+          alert('The page is reloading. Log back in to access logs');
+      } else {
+          alert('This page is not reloaded');
+      }
+    }
   };
 
-  // logs: JSON.parse(localStorage.getItem('logs')) || [],
+
   
-  // testfunction(){
-  //   this.props.history.push('/addLogs');
-  // }
-  // onUnload(event) { 
-  //   this.testfunction();
-  // }
+  testfunction(){
+    this.props.history.push('/addLogs');
+  }
+  onUnload(event) { 
+    this.testfunction();
+  }
   
-  // componentDidMount() {
-  //   window.addEventListener('beforeunload', this.onUnload)
-  // }
+  componentDidMount() {
+    window.addEventListener('beforeunload', this.onUnload)
+  }
   
-  // componentWillUnmount() {
-  //    window.removeEventListener('beforeunload', this.onUnload)
-  // }
+  componentWillUnmount() {
+     window.removeEventListener('beforeunload', this.onUnload)
+  }
  
   handlePostAuthenticate = ({ username, password, user_id }) => {
     AuthApiService.postLogin({
