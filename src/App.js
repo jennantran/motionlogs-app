@@ -67,6 +67,7 @@ class App extends Component {
                 'Content-Type': 'application/json',
                 'Authorization': `bearer ${TokenService.getAuthToken()}`,
                 'user_id': res.user_id,
+                'Access-Control-Allow-Origin': 'https://sheltered-fortress-79630.herokuapp.com/'
               },
             })
             .then((response) => response.json())
