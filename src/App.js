@@ -25,16 +25,7 @@ class App extends Component {
       log_id:'',
       addUser: this.addUser,
     }
-    if (window.performance) {
-      if (performance.navigation) {
-          alert('The page is reloading. Log back in to access logs');
-      } else {
-          alert('This page is not reloaded');
-      }
-    }
   };
-
-
   
   testfunction(){
     this.props.history.push('/addLogs');
@@ -67,12 +58,11 @@ class App extends Component {
                 'Content-Type': 'application/json',
                 'Authorization': `bearer ${TokenService.getAuthToken()}`,
                 'user_id': res.user_id,
-                'mode':'cors',
               },
             })
             .then((response) => response.json())
             .then((responseJson) => {
-              if (!responseJson.success || responseJson.success === false) {
+              if (responseJson.success && responseJson.success === false) {
                 throw new Error('error in getting logs');
               } else {
                 this.setState({
@@ -82,12 +72,12 @@ class App extends Component {
               }
             })
             .catch((error) => {
-              console.error(error);
+              console.error('error response', error);
             })
          })  
 
           .catch((error) => { 
-            console.error(error);
+            console.error('error fetch', error);
         })  
       }
 
